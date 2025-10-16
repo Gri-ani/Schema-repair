@@ -1,0 +1,259 @@
+You are an expert in analyzing and validating join relationships between two database tables 
+for a given natural language query.
+
+You will be provided with:
+- A *query* in natural language,
+- The *schemas* of two tables,
+- A set of *join candidates*, where:
+  - Each table pair key is formatted as: db_id#sep#table1-db_id#sep#table2
+  - Each column pair key is formatted as: db_id#sep#table1#sep#column1-db_id#sep#table2#sep#column2
+
+Your goal is to determine whether any of the given join candidates represent a *valid join*
+ that can correctly answer the query.
+
+Respond using exactly *two lines*:
+- Line 1: Explanation
+- Line 2: Output "YES" if at least one join candidate is valid, otherwise "NO"
+
+=====================
+Query: "{query_text}"
+
+Table Schema for {table_key1.split('#sep#')[-1]}:
+{schema1_str}
+
+Table Schema for {table_key2.split('#sep#')[-1]}:
+{schema2_str}
+
+Join Candidates:
+{json.dumps(possible_joins, indent=2)}
+
+
+
+```
+
+=============================
+        OBJECTIVE:
+=============================
+You are an expert at analyzing natural-language queries
+and validating whether the provided join candidates between
+two tables are valid to answer the query.
+=============================
+        INPUT:
+=============================
+1. A natural language query posed by the user.
+2. The database schema for two table.
+3. A list of possible join candidates between these two tables, formatted as column pairs (e.g., TableA.columnX, TableB.columnY)
+and a combined score(weighted sum of ) and jaccard score of the instances.
+4. A list of entities(sub-queries) mentioned in the query
+============================
+        Output
+============================
+Return a json dictionary with the following keys
+{
+  "intent_summary": Brief explanation of what the user is asking for.
+  "entities_relation": Give the relationships between the entities.
+  "join_validity": YES/NO
+  "rationale": whether any of the given join candidates actually shows the relationship between the entities
+}
+============================
+       CONSTRAINTS
+============================
+Think step by step:  
+1. Understand the query and what information it is asking for.  
+2. Look at the schemas of both tables.  
+3. Check the given possible join candidates.  
+4. Based on the entities given find the relationship between the entities
+5. Based on the relationship between the entities see if any join actually shows that relationship or not
+4. Decide if the query can actually be answered by using any of those joins and answer "Yes" or n"No" 
+
+Do not assume anything outside the given information.  
+
+=============================
+    ONE SHOT EXAMPLE
+=============================
+Query: "what is the expense for category food for the september meeting event?"
+
+Table Schema for expense:  
+Table: expense  
+Columns: expense_id, expense_date, cost, link_to_budget  
+
+Table Schema for budget:  
+Table: budget  
+Columns: budget_id, category, spent, remaining, amount, event_status, event_name  
+
+Possible joins between tables student_club#sep#budget and student_club#sep#expense are represented as:  
+"db_id#sep#table_name#sep#column_name - db_id#sep#table_name#sep#column_name"  
+
+{
+  "student_club#sep#budget#sep#budget_id - student_club#sep#expense#sep#link_to_budget": {
+    "join_category": "inferred PK-FK",
+    "combined_score": 0.6723837485680213
+  },
+  "student_club#sep#budget#sep#spent - student_club#sep#expense#sep#cost": {
+    "join_category": "Semantic",
+    "combined_score": 0.5188322831844462
+  }
+}
+
+
+
+
+
+
+
+
+=============================
+        OBJECTIVE:
+=============================
+You are an expert at analyzing natural-language database queries
+and validating whether a given join candidate between two tables
+represents a logically valid and relevant relationship needed 
+to address (fully or partially) the user’s query.
+
+=============================
+        INPUT:
+=============================
+1. Query: A natural-language question posed by the user.  
+2. Schemas: Database schemas for two tables, including table names and their columns.  
+3. Join Candidates: A list of possible join column pairs between the two tables, each with metadata such as:
+   - combined_score (weighted or similarity-based)
+   - jaccard_score (instance overlap similarity)
+4. Entities:A list of key entities or sub-queries extracted from the user’s query.
+
+=============================
+        TASK
+=============================
+Determine whether any of the provided join candidates
+captures the **intended relationship between the entities** mentioned in the query.  
+Note: The join does not need to fully answer the query — it only needs to
+represent the correct **linkage between the two tables involved** in that part of the query.
+
+=============================
+    OUTPUT FORMAT
+=============================
+Return a JSON object with the following keys:
+
+{
+  "intent_summary": "<Brief explanation of what the user is asking for.>",
+  "entities_relation": "<Explain the logical relationship between the entities as described in the query.>",
+  "join_validity": "YES/NO",
+  "rationale": "<Explain whether any of the given join candidates aligns with the entity relationship and why it does or does not.>"
+}
+
+=============================
+    REASONING CONSTRAINTS
+=============================
+Follow this reasoning process step-by-step:
+
+1. Understand Intent:
+   Summarize what the user wants to know — e.g., a value lookup, aggregation, or relationship exploration.
+
+2. Identify Entities and Tables: 
+   Determine which entities (terms or concepts) map to which tables.
+
+3. Interpret Relationship:
+   Understand how these entities are related conceptually (e.g., “expenses belong to budgets,” “students enroll in courses,” etc.).
+
+4. Analyze Given Joins: 
+   Review each join candidate to see if it reflects that conceptual relationship.
+
+5. Assess Sufficiency (Partial Validity Allowed):  
+   The join is valid if it expresses the correct linkage between the two relevant entities or tables, even if other tables or joins might be needed for the full query.
+
+6. Make Decision:
+   If at least one join candidate logically expresses that relationship, set `"join_validity": "YES"`. Otherwise, `"NO"`.
+
+Do not assume any hidden columns, implicit keys, or extra tables beyond what is provided.**
+Only use the given schemas, entities, and join candidates.
+
+=============================
+        EXAMPLE
+=============================
+Query:  
+"What is the expense for category food for the September meeting event?"
+
+**Table Schemas:**  
+Table: expense  
+Columns: expense_id, expense_date, cost, link_to_budget  
+
+Table: budget  
+Columns: budget_id, category, spent, remaining, amount, event_status, event_name  
+
+Possible Joins:
+{
+  "student_club#sep#budget#sep#budget_id - student_club#sep#expense#sep#link_to_budget": {
+    "join_category": "inferred PK-FK",
+    "combined_score": 0.6723837485680213
+  },
+  "student_club#sep#budget#sep#spent - student_club#sep#expense#sep#cost": {
+    "join_category": "Semantic",
+    "combined_score": 0.5188322831844462
+  }
+}
+
+Output:
+{
+  "intent_summary": "The user wants to find the total expense (cost) for the category 'food' associated with the 'September meeting' event.",
+  "entities_relation": "The query connects 'expense' records with 'budget' entries that define event and category information. Each expense is linked to a specific budget entry.",
+  "join_validity": "YES",
+  "rationale": "The join 'budget.budget_id - expense.link_to_budget' correctly represents the relationship between expenses and budgets, enabling partial fulfillment of the query by linking expenses to their associated event and category data."
+}
+
+
+
+
+==========================================
+============================= OBJECTIVE:
+
+You are an expert at analyzing natural-language database queries and validating whether a given join candidate between two tables represents the correct relationship needed to address user's query. ============================= INPUT:
+
+Query: A natural-language question posed by the user. Schemas: Database schemas for two tables, including table names and their columns. Join Candidates: A list of possible join column pairs between the two tables, each with metadata such as: combined_score (weighted or similarity-based) jaccard_score (instance overlap similarity) Entities:A list of key entities or sub-queries extracted from the user’s query.
+
+============================= TASK
+
+Determine whether any of the provided join candidates actually captures the intended relationship between the entities mentioned in the query. Note: The join does not need to fully answer the query — it only needs to represent the correct linkage between the two tables involved in that part of the query. ============================= OUTPUT FORMAT
+
+Return a JSON object with the following keys:
+
+{ "intent_summary": "<Brief explanation of what the user is asking for.>", "entities_relation": "<Explain the logical relationship between the entities as described in the query.>"," "join_validity": "YES/NO", "rationale": "<Explain whether any of the given join candidates aligns with the entity relationship and why it does or does not.>" } ============================= REASONING CONSTRAINTS
+
+Follow this reasoning process step-by-step:
+
+Understand Intent: Summarize what the user wants to know — e.g., a value lookup, aggregation, or relationship exploration.
+
+Identify Entities and Tables: Determine which entities (terms or concepts) map to which tables.
+
+Interpret Relationship: Understand how these entities are related conceptually (e.g., “expenses belong to budgets,” “students enroll in courses,” etc.).
+
+Analyze Given Joins: Review each join candidate to see if it reflects that conceptual relationship. Also note that just because a join can be done and has a high score doesn't mean it is actually a correct join to be done for that query. Joinability is subject to the query.
+
+Make Decision: If at least one join candidate shows the actual relationship. For this see if existing column is actually correct or some other column would capture that actual relationship?
+
+"join_validity": "YES" if existing column can capture the relationship
+
+. Otherwise,
+
+"NO", if some other column should be added to capture the exact relationship
+
+. Do not assume any hidden columns, implicit keys, or extra tables beyond what is provided.** Only use the given schemas, entities, and join candidates. ============================= EXAMPLE Give the output - format given below { "intent_summary": "<Brief explanation of what the user is asking for.>", "entities_relation": "<Explain the logical relationship between the entities as described in the query without any extra assumptions.>", "join_validity": "YES/NO", "rationale": "<Explain whether any of the given join candidates aligns with the entity relationship and why it does or does not.>"
+
+For- Query: "What is the expense for category food for the September meeting event?"
+
+Table Schemas: Table: expense Columns: expense_id, expense_date, cost, link_to_budget
+
+Table: budget Columns: budget_id, category, spent, remaining, amount, event_status, event_name
+
+Possible Joins: { "student_club#sep#budget#sep#budget_id - student_club#sep#expense#sep#link_to_budget": { "join_category": "inferred PK-FK", "combined_score": 0.6723837485680213 }, "student_club#sep#budget#sep#spent - student_club#sep#expense#sep#cost": { "join_category": "Semantic", "combined_score": 0.5188322831844462 } }
+
+Output Give the output only if any join actually cqptures any relationship between the entities. The relationship should be the actual relationship and not an iterpreted one.: { "intent_summary": "The user wants to find the total expense (cost) for the category 'food' associated with the 'September meeting' event.", "entities_relation": "The query connects 'expense' records with 'budget' entries that define event and category information. Each expense is linked to a specific budget entry.", "join_validity": "YES", "rationale": "The join 'budget.budget_id - expense.link_to_budget' correctly represents the relationship between expenses and budgets, enabling partial fulfillment of the query by linking expenses to their associated event and category data." }
+
+Query Give me the employees and their corresponding job titles.
+
+Schema "job_employee#sep#employee": { "db_id": "job_employee", "table_name_original": "Employee", "table_name": "employee", "column_names_original": [ "emp_id", "emp_name", "skill_area", "expected_salary_rs", "years_of_experience" ],
+
+"job_employee#sep#job": { "db_id": "job_employee", "table_name_original": "Job", "table_name": "job", "column_names_original": [ "job_id", "company_id", "job_title", "required_skill", "salary_offered_rs", "experience_required_yrs" ],
+
+Join candidiates: "job_employee#sep#job-job_employee#sep#employee": { "job_employee#sep#job#sep#required_skill-job_employee#sep#employee#sep#skill_area": { "jaccard": 1.0, "uniqueness": 0.8333333333333334, "combined_score": 0.7219969034194946 }, "job_employee#sep#job#sep#salary_offered_rs-job_employee#sep#employee#sep#expected_salary_rs": { "jaccard": 0.08333333333333333, "uniqueness": 1.0, "combined_score": 0.444764628012975 }, "job_employee#sep#job#sep#experience_required_yrs-job_employee#sep#employee#sep#years_of_experience": { "jaccard": 0.75, "uniqueness": 0.6666666666666666, "combined_score": 0.5899103224277497 } } }
+
+Entities employee job
+====================================================================================
