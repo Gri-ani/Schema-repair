@@ -1,0 +1,426 @@
+[
+  {
+    "question": [
+      "employees",
+      "job_titles"
+    ],
+    "predicted_answer": [
+      "job_employee#sep#job",
+      "job_employee#sep#employee"
+    ]
+  },
+  {
+    "question": [
+      "job_applications",
+      "employees"
+    ],
+    "predicted_answer": [
+      "job_employee#sep#job",
+      "job_employee#sep#employee"
+    ]
+  },
+  {
+    "question": [
+      "jobs:id",
+      "jobs:title",
+      "employees:job_applications"
+    ],
+    "predicted_answer": [
+      "job_employee#sep#job",
+      "job_employee#sep#company",
+      "job_employee#sep#employee"
+    ]
+  },
+  {
+    "question": [
+      "employees",
+      "jobs",
+      "skills"
+    ],
+    "predicted_answer": [
+      "job_employee#sep#job",
+      "job_employee#sep#employee",
+      "job_employee#sep#company"
+    ]
+  },
+  {
+    "question": [
+      "jobs:posting_date"
+    ],
+    "predicted_answer": [
+      "job_employee#sep#job"
+    ]
+  },
+  {
+    "question": [
+      "employees:name",
+      "employees:skills"
+    ],
+    "predicted_answer": [
+      "job_employee#sep#company",
+      "job_employee#sep#job"
+    ]
+  },
+  {
+    "question": [
+      "employees:experience years",
+      "jobs:required experience years"
+    ],
+    "predicted_answer": [
+      "job_employee#sep#job",
+      "job_employee#sep#employee"
+    ]
+  },
+  {
+    "question": [
+      "employees:salary expectations",
+      "jobs:salary"
+    ],
+    "predicted_answer": [
+      "job_employee#sep#company",
+      "job_employee#sep#employee"
+    ]
+  },
+  {
+    "question": [
+      "students:club",
+      "students:event"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#college"
+    ]
+  },
+  {
+    "question": [
+      "students:club",
+      "students:event",
+      "students:phone number"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#member",
+      "student_club#sep#department"
+    ]
+  },
+  {
+    "question": [
+      "students:club",
+      "students:event",
+      "students:T-shirt size"
+    ],
+    "predicted_answer": [
+      "student_club#sep#member_details",
+      "student_club#sep#event",
+      "student_club#sep#college"
+    ]
+  },
+  {
+    "question": [
+      "event:attendance",
+      "students:club"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#college"
+    ]
+  },
+  {
+    "question": [
+      "student:name",
+      "event:name"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#college"
+    ]
+  },
+  {
+    "question": [
+      "student:name",
+      "students:club",
+      "event:year"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#department",
+      "student_club#sep#college"
+    ]
+  },
+  {
+    "question": [
+      "event:attendance",
+      "students:club",
+      "event:type"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#department",
+      "student_club#sep#college"
+    ]
+  },
+  {
+    "question": [
+      "event:name",
+      "event:attendance",
+      "students:club"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#department",
+      "student_club#sep#college"
+    ]
+  },
+  {
+    "question": [
+      "event:attendance",
+      "event:type",
+      "event:year"
+    ],
+    "predicted_answer": [
+      "student_club#sep#budget",
+      "student_club#sep#expense",
+      "student_club#sep#event"
+    ]
+  },
+  {
+    "question": [
+      "member:full name",
+      "students:club",
+      "students:event"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#college",
+      "student_club#sep#member_details"
+    ]
+  },
+  {
+    "question": [
+      "funds:amount",
+      "member:position"
+    ],
+    "predicted_answer": [
+      "student_club#sep#budget",
+      "student_club#sep#member_details"
+    ]
+  },
+  {
+    "question": [
+      "students:club",
+      "expense:advertisement",
+      "event:name"
+    ],
+    "predicted_answer": [
+      "student_club#sep#expense",
+      "student_club#sep#event",
+      "student_club#sep#college"
+    ]
+  },
+  {
+    "question": [
+      "budget:amount",
+      "budget:category",
+      "event:name"
+    ],
+    "predicted_answer": [
+      "student_club#sep#budget",
+      "student_club#sep#expense",
+      "student_club#sep#event"
+    ]
+  },
+  {
+    "question": [
+      "expense:approval status",
+      "event:name",
+      "event:date"
+    ],
+    "predicted_answer": [
+      "student_club#sep#expense",
+      "student_club#sep#budget",
+      "student_club#sep#event"
+    ]
+  },
+  {
+    "question": [
+      "event:status",
+      "expense:item",
+      "event:date"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#budget",
+      "student_club#sep#expense"
+    ]
+  },
+  {
+    "question": [
+      "member:major",
+      "member:position"
+    ],
+    "predicted_answer": [
+      "student_club#sep#member",
+      "student_club#sep#member_details"
+    ]
+  },
+  {
+    "question": [
+      "member:department",
+      "member:position"
+    ],
+    "predicted_answer": [
+      "student_club#sep#member_details",
+      "student_club#sep#member"
+    ]
+  },
+  {
+    "question": [
+      "member:name",
+      "member:dues payment date"
+    ],
+    "predicted_answer": [
+      "student_club#sep#income",
+      "student_club#sep#member"
+    ]
+  },
+  {
+    "question": [
+      "member:full name",
+      "member:dues payment date"
+    ],
+    "predicted_answer": [
+      "student_club#sep#member",
+      "student_club#sep#college"
+    ]
+  },
+  {
+    "question": [
+      "member:name",
+      "event:name"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#member_details"
+    ]
+  },
+  {
+    "question": [
+      "expense:item",
+      "member:position"
+    ],
+    "predicted_answer": [
+      "student_club#sep#expense",
+      "student_club#sep#member_details"
+    ]
+  },
+  {
+    "question": [
+      "member:attendance",
+      "event:name"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#member"
+    ]
+  },
+  {
+    "question": [
+      "member:name",
+      "income:date"
+    ],
+    "predicted_answer": [
+      "student_club#sep#income",
+      "student_club#sep#member"
+    ]
+  },
+  {
+    "question": [
+      "member:phone number",
+      "event:attendance"
+    ],
+    "predicted_answer": [
+      "student_club#sep#member",
+      "student_club#sep#event"
+    ]
+  },
+  {
+    "question": [
+      "event:status",
+      "event:spend",
+      "event:budget"
+    ],
+    "predicted_answer": [
+      "student_club#sep#budget",
+      "student_club#sep#expense",
+      "student_club#sep#event"
+    ]
+  },
+  {
+    "question": [
+      "student:name",
+      "event:attendance count"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#college"
+    ]
+  },
+  {
+    "question": [
+      "student:major",
+      "event:name",
+      "student:name"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#major",
+      "student_club#sep#college"
+    ]
+  },
+  {
+    "question": [
+      "student:name",
+      "budget:manager",
+      "event:name"
+    ],
+    "predicted_answer": [
+      "student_club#sep#budget",
+      "student_club#sep#event",
+      "student_club#sep#college"
+    ]
+  },
+  {
+    "question": [
+      "student:full name",
+      "income:amount",
+      "income:source"
+    ],
+    "predicted_answer": [
+      "student_club#sep#income",
+      "student_club#sep#college",
+      "student_club#sep#department"
+    ]
+  },
+  {
+    "question": [
+      "member:attendance",
+      "event:name",
+      "event:year"
+    ],
+    "predicted_answer": [
+      "student_club#sep#event",
+      "student_club#sep#budget",
+      "student_club#sep#member"
+    ]
+  },
+  {
+    "question": [
+      "members",
+      "college"
+    ],
+    "predicted_answer": [
+      "student_club#sep#college",
+      "student_club#sep#member"
+    ]
+  }
+]
