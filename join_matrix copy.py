@@ -3,7 +3,7 @@ import json
 import pickle
 from tqdm import tqdm
 from groq import Groq
-client = Groq(api_key="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")
+client = Groq(api_key="")
 
 def read_pickle(fn):
     with open(fn, 'rb') as f:
@@ -514,4 +514,5 @@ if __name__ == "__main__":
 #         prediction = 0
 
 #     return prediction
+
 
