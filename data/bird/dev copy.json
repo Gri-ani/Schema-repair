@@ -1,0 +1,970 @@
+[
+  {
+    "question_id": 187,
+    "db_id": "job_employee",
+    "question": "Find the employees and their corresponding job titles"
+  },
+  {
+    "question_id": 188,
+    "db_id": "job_employee",
+    "question": "Give all the job applications of the employees"
+  },
+  {
+    "question_id": 189,
+    "db_id": "job_employee",
+    "question": "Give the job_id's and the job_titles for all the jobs employees applied for"
+  },
+  {
+    "question_id": 190,
+    "db_id": "job_employee",
+    "question": "Match the employees to the jobs they are qualified for based on their skills"
+  },
+  {
+    "question_id": 191,
+    "db_id": "job_employee",
+    "question": "Tell me the posting date for job"
+  },
+  {
+    "question_id": 192,
+    "db_id": "job_employee",
+    "question": "Tell me the names of all the employees and their skills"
+  },
+
+  {
+    "question_id": 0,
+    "db_id": "california_schools",
+    "question": "Please list the zip code of all the charter schools in Fresno County Office of Education."
+  },
+  {
+    "question_id": 1,
+    "db_id": "california_schools",
+    "question": "Please list the phone numbers of the direct charter-funded schools that are opened after 2000/1/1."
+  },
+  {
+    "question_id": 2,
+    "db_id": "california_schools",
+    "question": "Among the schools with the SAT test takers of over 500, please list the schools that are magnet schools or offer a magnet program."
+  },
+  {
+    "question_id": 3,
+    "db_id": "california_schools",
+    "question": "Among the schools with the average score in Math over 560 in the SAT test, how many schools are directly charter-funded?"
+  },
+  {
+    "question_id": 4,
+    "db_id": "california_schools",
+    "question": "For the school with the highest average score in Reading in the SAT test, what is its FRPM count for students aged 5-17?"
+  },
+  {
+    "question_id": 5,
+    "db_id": "california_schools",
+    "question": "Please list the codes of the schools with a total enrollment of over 500."
+  },
+  {
+    "question_id": 6,
+    "db_id": "california_schools",
+    "question": "Among the schools with an SAT excellence rate of over 0.3, what is the highest eligible free rate for students aged 5-17?"
+  },
+  {
+    "question_id": 7,
+    "db_id": "california_schools",
+    "question": "Please list the phone numbers of the schools with the top 3 SAT excellence rate."
+  },
+  {
+    "question_id": 8,
+    "db_id": "california_schools",
+    "question": "List the top five schools, by descending order, from the highest to the lowest, the most number of Enrollment (Ages 5-17). Please give their NCES school identification number."
+  },
+  {
+    "question_id": 9,
+    "db_id": "california_schools",
+    "question": "How many schools in merged Alameda have number of test takers less than 100?"
+  },
+  {
+    "question_id": 10,
+    "db_id": "california_schools",
+    "question": "How many schools in Contra Costa (directly funded) have number of test takers not more than 250?"
+  },
+  {
+    "question_id": 11,
+    "db_id": "california_schools",
+    "question": "How many schools in Amador which the Low Grade is 9 and the High Grade is 12?"
+  },
+  {
+    "question_id": 12,
+    "db_id": "california_schools",
+    "question": "List the names of schools with more than 30 difference in enrollements between K-12 and ages 5-17? Please also give the full street adress of the schools."
+  },
+  {
+    "question_id": 13,
+    "db_id": "california_schools",
+    "question": "Give the names of the schools with the percent eligible for free meals in K-12 is more than 0.1 and test takers whose test score is greater than or equal to 1500?"
+  },
+  {
+    "question_id": 14,
+    "db_id": "california_schools",
+    "question": "Name schools in Riverside which the average of average math score for SAT is grater than 400, what is the funding type of these schools?"
+  },
+  {
+    "question_id": 15,
+    "db_id": "california_schools",
+    "question": "State the names and full communication address of high schools in Monterey which has more than 800 free or reduced price meals for ages 15-17?"
+  },
+  {
+    "question_id": 16,
+    "db_id": "california_schools",
+    "question": "Consider the average difference between K-12 enrollment and 15-17 enrollment of schools that are locally funded, list the names and DOC type of schools which has a difference above this average."
+  },
+  {
+    "question_id": 17,
+    "db_id": "california_schools",
+    "question": "When did the first-through-twelfth-grade school with the largest enrollment open?"
+  },
+  {
+    "question_id": 18,
+    "db_id": "california_schools",
+    "question": "Which cities have the top 5 lowest enrollment number for students in grades 1 through 12?"
+  },
+  {
+    "question_id": 19,
+    "db_id": "california_schools",
+    "question": "What is the eligible free or reduced price meal rate for the top 5 schools in grades 1-12 with the highest free or reduced price meal count of the schools with the ownership code 66?"
+  },
+  {
+    "question_id": 20,
+    "db_id": "california_schools",
+    "question": "If there are any, what are the websites address of the schools with a free meal count of 1,900-2,000 to students aged 5-17? Include the name of the school."
+  },
+  {
+    "question_id": 21,
+    "db_id": "california_schools",
+    "question": "What is the free rate for students between the ages of 5 and 17 at the school run by Kacey Gibson?"
+  },
+  {
+    "question_id": 22,
+    "db_id": "california_schools",
+    "question": "What is the administrator's email address of the chartered school with the fewest students enrolled in grades 1 through 12?"
+  },
+  {
+    "question_id": 23,
+    "db_id": "california_schools",
+    "question": "What is the complete address of the school with the lowest excellence rate? Indicate the Street, City, Zip and State."
+  },
+  {
+    "question_id": 24,
+    "db_id": "california_schools",
+    "question": "What are the webpages for the Los Angeles County school that has between 2,000 and 3,000 test takers?"
+  },
+  {
+    "question_id": 25,
+    "db_id": "california_schools",
+    "question": "What is the average number of test takers from Fresno schools that opened between 1/1/1980 and 12/31/1980?"
+  },
+  {
+    "question_id": 26,
+    "db_id": "california_schools",
+    "question": "Which exclusively virtual schools have the top 5 highest average reading scores?"
+  },
+  {
+    "question_id": 27,
+    "db_id": "california_schools",
+    "question": "What is the average math score of the school with the lowest average score for all subjects, and in which county is it located?"
+  },
+  {
+    "question_id": 28,
+    "db_id": "california_schools",
+    "question": "What is the average writing score of the school who has the highest number of test takers whose total SAT sscores are greater or equal to 1500? Indicate the city to where the school is situated."
+  },
+  {
+    "question_id": 29,
+    "db_id": "california_schools",
+    "question": "Which state special schools have the highest number of enrollees from grades 1 through 12?"
+  },
+  {
+    "question_id": 30,
+    "db_id": "california_schools",
+    "question": "How many test takers are there at the school/s whose mailing city address is in Fresno?"
+  },
+  {
+    "question_id": 31,
+    "db_id": "california_schools",
+    "question": "What is the total number of non-chartered schools in the county of Los Angeles with a percent (%) of eligible free meals for grades 1 through 12 that is less than 0.18%?"
+  },
+  {
+    "question_id": 32,
+    "db_id": "california_schools",
+    "question": "What is the district code for the School that does not offer a magnet program in the city of Fresno?"
+  },
+  {
+    "question_id": 33,
+    "db_id": "california_schools",
+    "question": "How many students from the ages of 5 to 17 are enrolled at the State Special School school in Fremont for the 2014-2015 academic year?"
+  },
+  {
+    "question_id": 34,
+    "db_id": "california_schools",
+    "question": "What is the free or reduced price meal count for ages 5 to 17 in the Youth Authority School with a mailing street address of PO Box 1040?"
+  },
+  {
+    "question_id": 35,
+    "db_id": "california_schools",
+    "question": "What is the lowest grade for the District Special Education Consortia School with National Center for Educational Statistics school district identification number of 613360?"
+  },
+  {
+    "question_id": 36,
+    "db_id": "california_schools",
+    "question": "What is the educational level name for the schools with Breakfast Provision 2 in county code 37? Indicate the name of the school."
+  },
+  {
+    "question_id": 37,
+    "db_id": "california_schools",
+    "question": "What is the city location of the high school level school with Lunch Provision 2 whose lowest grade is 9 and the highest grade is 12 in the county of Merced?"
+  },
+  {
+    "question_id": 38,
+    "db_id": "california_schools",
+    "question": "Which schools served a grade span of Kindergarten to 9th grade in the county of Los Angeles and what is its Percent (%) Eligible FRPM (Ages 5-17)?"
+  },
+  {
+    "question_id": 39,
+    "db_id": "california_schools",
+    "question": "What is the school type of the school with the highest latitude? Indicate the name of the school as well as the latitude coordinates."
+  },
+  {
+    "question_id": 40,
+    "db_id": "california_schools",
+    "question": "In which city can you find the school in the state of California with the lowest latitude coordinates and what is its lowest grade? Indicate the school name."
+  },
+  {
+    "question_id": 41,
+    "db_id": "california_schools",
+    "question": "Of the schools that offers a magnet program serving a grade span of Kindergarten to 8th grade, how many offers Multiple Provision Types? List the number of cities that offers a Kindergarten to 8th grade span and indicate how many schools are there serving such grade span for each city."
+  },
+  {
+    "question_id": 42,
+    "db_id": "california_schools",
+    "question": "What is the Percent (%) Eligible Free (K-12) in the school administered by an administrator whose first name is Alusine. List the district code of the school."
+  },
+  {
+    "question_id": 43,
+    "db_id": "california_schools",
+    "question": "What is the e-mail address of the administrator of the school located in the San Bernardino county, District of San Bernardino City Unified that opened between 1/1/2009 to 12/31/2010 whose school types are public Intermediate/Middle Schools and Unified Scools?"
+  },
+  {
+    "question_id": 44,
+    "db_id": "superhero",
+    "question": "How many superheroes have the super power of \"Super Strength\"?"
+  },
+  {
+    "question_id": 45,
+    "db_id": "superhero",
+    "question": "How many superheroes have blue eyes?"
+  },
+  {
+    "question_id": 46,
+    "db_id": "superhero",
+    "question": "What is the colour of Apocalypse's skin?"
+  },
+  {
+    "question_id": 47,
+    "db_id": "superhero",
+    "question": "Please list the superhero names of all the superheroes that have blue eyes and blond hair."
+  },
+  {
+    "question_id": 48,
+    "db_id": "superhero",
+    "question": "How many superheroes are published by Marvel Comics?"
+  },
+  {
+    "question_id": 49,
+    "db_id": "superhero",
+    "question": "Who is the publisher of Sauron?"
+  },
+  {
+    "question_id": 50,
+    "db_id": "superhero",
+    "question": "What is the average height of the superheroes from Marvel Comics?"
+  },
+  {
+    "question_id": 51,
+    "db_id": "superhero",
+    "question": "What is Copycat's race?"
+  },
+  {
+    "question_id": 52,
+    "db_id": "superhero",
+    "question": "What is the name of the superhero that has the most powers?"
+  },
+  {
+    "question_id": 53,
+    "db_id": "superhero",
+    "question": "How many vampire superheroes are there?"
+  },
+  {
+    "question_id": 54,
+    "db_id": "superhero",
+    "question": "What is the average weight of all female superheroes?"
+  },
+  {
+    "question_id": 55,
+    "db_id": "superhero",
+    "question": "Among the male superheroes, list the full names of superheroes with weight greater than the 79% average weight of all superheroes."
+  },
+  {
+    "question_id": 56,
+    "db_id": "superhero",
+    "question": "Which power do superheroes have the most of?"
+  },
+  {
+    "question_id": 57,
+    "db_id": "superhero",
+    "question": "Which group does superhero A-Bomb belong to?"
+  },
+  {
+    "question_id": 58,
+    "db_id": "superhero",
+    "question": "Provide the heights of the heroes whose eye colours are amber."
+  },
+  {
+    "question_id": 59,
+    "db_id": "superhero",
+    "question": "List the heroes' names whose eyes and hair colours are both black."
+  },
+  {
+    "question_id": 60,
+    "db_id": "superhero",
+    "question": "Provide the eye colours of the heroes whose skin colours are gold."
+  },
+  {
+    "question_id": 61,
+    "db_id": "superhero",
+    "question": "Provide the full names of vampire heroes."
+  },
+  {
+    "question_id": 62,
+    "db_id": "superhero",
+    "question": "Describe the names of neutral alignment superheroes."
+  },
+  {
+    "question_id": 63,
+    "db_id": "superhero",
+    "question": "Find the average weight of the heroes who are aliens."
+  },
+  {
+    "question_id": 64,
+    "db_id": "superhero",
+    "question": "How many superheroes have a neutral alignment?"
+  },
+  {
+    "question_id": 65,
+    "db_id": "superhero",
+    "question": "Which superheroes have blue eyes with brown hair?"
+  },
+  {
+    "question_id": 66,
+    "db_id": "superhero",
+    "question": "What is the publisher for Hawkman, Karate Kid and Speedy?"
+  },
+  {
+    "question_id": 67,
+    "db_id": "superhero",
+    "question": "How many superheroes didn't have any publisher?"
+  },
+  {
+    "question_id": 68,
+    "db_id": "superhero",
+    "question": "Calculate the percentage of superheroes with blue eyes."
+  },
+  {
+    "question_id": 69,
+    "db_id": "superhero",
+    "question": "Find the ratio between male superheroes and female superheroes."
+  },
+  {
+    "question_id": 70,
+    "db_id": "superhero",
+    "question": "Find the race of the superhero who weighs 108kg and is 188cm tall."
+  },
+  {
+    "question_id": 71,
+    "db_id": "superhero",
+    "question": "What is the publisher name of the superhero ID 38?"
+  },
+  {
+    "question_id": 72,
+    "db_id": "superhero",
+    "question": "List down at least five full names of superheroes with blue eyes."
+  },
+  {
+    "question_id": 73,
+    "db_id": "superhero",
+    "question": "Provide the names of superheroes with attribute value between 75 to 80."
+  },
+  {
+    "question_id": 74,
+    "db_id": "superhero",
+    "question": "In superheroes with missing weight data, calculate the difference between the number of superheroes with blue eyes and no eye color."
+  },
+  {
+    "question_id": 75,
+    "db_id": "superhero",
+    "question": "Identify the heaviest superhero in DC Comics."
+  },
+  {
+    "question_id": 76,
+    "db_id": "superhero",
+    "question": "Which publisher created more superheroes: DC or Marvel Comics? Find the difference in the number of superheroes."
+  },
+  {
+    "question_id": 77,
+    "db_id": "superhero",
+    "question": "What is Abomination's eye colour?"
+  },
+  {
+    "question_id": 78,
+    "db_id": "superhero",
+    "question": "In superheroes with weight less than 100, list the full name of the superheroes with brown eyes."
+  },
+  {
+    "question_id": 79,
+    "db_id": "superhero",
+    "question": "List the attribute value of the superhero named Aquababy."
+  },
+  {
+    "question_id": 80,
+    "db_id": "superhero",
+    "question": "Provide the weight and race of the superhero with superhero ID 40."
+  },
+  {
+    "question_id": 81,
+    "db_id": "superhero",
+    "question": "Calculate the average height of all neutral superheroes."
+  },
+  {
+    "question_id": 82,
+    "db_id": "superhero",
+    "question": "List the hero ID of superheroes have intellegence as their power."
+  },
+  {
+    "question_id": 83,
+    "db_id": "superhero",
+    "question": "Give the eye colour of Blackwulf."
+  },
+  {
+    "question_id": 84,
+    "db_id": "superhero",
+    "question": "Please list all the superpowers of 3-D Man."
+  },
+  {
+    "question_id": 85,
+    "db_id": "superhero",
+    "question": "Among the superheroes with the super power of \"Super Strength\", how many of them have a height of over 200cm?"
+  },
+  {
+    "question_id": 86,
+    "db_id": "superhero",
+    "question": "Among the superheroes from Marvel Comics, how many of them have blue eyes?"
+  },
+  {
+    "question_id": 87,
+    "db_id": "superhero",
+    "question": "How many gold-eyed superheroes did Marvel Comics publish?"
+  },
+  {
+    "question_id": 88,
+    "db_id": "superhero",
+    "question": "What are the names of the superheroes with the power of death touch?"
+  },
+  {
+    "question_id": 89,
+    "db_id": "superhero",
+    "question": "What is the superpower of hero ID 56?"
+  },
+  {
+    "question_id": 90,
+    "db_id": "superhero",
+    "question": "Provide the hair colour of the human superhero who is 185 cm tall."
+  },
+  {
+    "question_id": 91,
+    "db_id": "superhero",
+    "question": "What is the percentage of blue female superheroes among all female superheroes?"
+  },
+  {
+    "question_id": 92,
+    "db_id": "superhero",
+    "question": "Provide superheroes' names who have the adaptation power."
+  },
+  {
+    "question_id": 93,
+    "db_id": "superhero",
+    "question": "List the powers of Hunter Zolomon."
+  },
+  {
+    "question_id": 94,
+    "db_id": "superhero",
+    "question": "What are the race and alignment of Cameron Hicks?"
+  },
+  {
+    "question_id": 95,
+    "db_id": "superhero",
+    "question": "How many percent of female heroes were published by Marvel Comics?"
+  },
+  {
+    "question_id": 96,
+    "db_id": "superhero",
+    "question": "What is Abomination's superpower?"
+  },
+  {
+    "question_id": 97,
+    "db_id": "superhero",
+    "question": "Among the superheroes with the race of god/eternal, how many of them are male?"
+  },
+  {
+    "question_id": 98,
+    "db_id": "superhero",
+    "question": "Which hero was the fastest?"
+  },
+  {
+    "question_id": 99,
+    "db_id": "superhero",
+    "question": "State all of 3-D Man's attributes along with their values."
+  },
+  {
+    "question_id": 100,
+    "db_id": "superhero",
+    "question": "What is the superpowers of the superhero has Helen Parr as their full name?"
+  },
+  {
+    "question_id": 101,
+    "db_id": "superhero",
+    "question": "What is the race of the superhero with maximum attribute value?"
+  },
+  {
+    "question_id": 102,
+    "db_id": "superhero",
+    "question": "Give the alignment and superpowers of the superhero named Atom IV."
+  },
+  {
+    "question_id": 103,
+    "db_id": "superhero",
+    "question": "Calculate the average attribute value of all neutral superheroes."
+  },
+  {
+    "question_id": 104,
+    "db_id": "superhero",
+    "question": "List the skin colour of the superheroes with 100 attribute value."
+  },
+  {
+    "question_id": 105,
+    "db_id": "superhero",
+    "question": "Count the good female superheroes."
+  },
+  {
+    "question_id": 106,
+    "db_id": "superhero",
+    "question": "Among the bad superheroes, what is the percentage of female superheroes?"
+  },
+  {
+    "question_id": 107,
+    "db_id": "superhero",
+    "question": "How strong is the Hulk?"
+  },
+  {
+    "question_id": 108,
+    "db_id": "superhero",
+    "question": "List down Ajax's superpowers."
+  },
+  {
+    "question_id": 109,
+    "db_id": "superhero",
+    "question": "How many green-skinned villains are there in the superhero universe?"
+  },
+  {
+    "question_id": 110,
+    "db_id": "superhero",
+    "question": "How many female superheroes are in Marvel Comics?"
+  },
+  {
+    "question_id": 111,
+    "db_id": "superhero",
+    "question": "Identify superheroes who can control wind and list their names in alphabetical order."
+  },
+  {
+    "question_id": 112,
+    "db_id": "superhero",
+    "question": "What is the average height of a non-human superhero in Dark Horse Comics?"
+  },
+  {
+    "question_id": 113,
+    "db_id": "superhero",
+    "question": "Count the fastest superheroes."
+  },
+  {
+    "question_id": 114,
+    "db_id": "superhero",
+    "question": "Identify the weakest attribute of the Black Panther."
+  },
+  {
+    "question_id": 115,
+    "db_id": "superhero",
+    "question": "Among all superheroes created by George Lucas, identify the percentage of female superheroes."
+  },
+  {
+    "question_id": 116,
+    "db_id": "superhero",
+    "question": "Among all superheroes in Marvel Comics, identify the percentage of 'good' superheroes."
+  },
+  {
+    "question_id": 117,
+    "db_id": "superhero",
+    "question": "List the power of superheroes with height greater than 80% of the average height of all superheroes."
+  },
+  {
+    "index": 118,
+    "question": "Among the superheroes with blue eyes, how many of them have the super power of 'Agility'?",
+    "db_id": "superhero"
+  },
+  {
+    "index": 119,
+    "question": "Among the superheroes from Marvel Comics, what is the percentage of those who have the super power of 'Super Strength'?",
+    "db_id": "superhero"
+  },
+  {
+    "index": 120,
+    "question": "Which publisher published the slowest superhero?",
+    "db_id": "superhero"
+  },
+  {
+    "index": 121,
+    "question": "How many female superheroes have a strength value of 100?",
+    "db_id": "superhero"
+  },
+  {
+    "index": 122,
+    "question": "Provide the superpowers of the superhero called Deathlok.",
+    "db_id": "superhero"
+  },
+  {
+    "index": 123,
+    "question": "List down at least five superpowers of male superheroes.",
+    "db_id": "superhero"
+  },
+  {
+    "index": 124,
+    "question": "Which superhero has the most durability published by Dark Horse Comics?",
+    "db_id": "superhero"
+  },
+  {
+    "index": 125,
+    "question": "Give the race of the blue-haired male superhero.",
+    "db_id": "superhero"
+  },
+  {
+    "index": 126,
+    "question": "Identify the gender of the superhero who has the ability of Phoenix Force.",
+    "db_id": "superhero"
+  },
+  {
+    "index": 127,
+    "question": "How many students of the Student_Club have attended the event \"Women's Soccer\"?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 128,
+    "question": "Please list the phone numbers of the students from the Student_Club that has attended the event \"Women's Soccer\".",
+    "db_id": "student_club"
+  },
+  {
+    "index": 129,
+    "question": "Among the students from the Student_Club who attended the event \"Women's Soccer\", how many of them want a T-shirt that's in medium size?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 130,
+    "question": "What is the event that has the highest attendance of the students from the Student_Club?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 131,
+    "question": "Please list the event names of all the events attended by Maya Mclean.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 132,
+    "question": "How many events of the Student_Club did Sacha Harrison attend in 2019?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 133,
+    "question": "Among the events attended by more than 10 members of the Student_Club, how many of them are meetings?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 134,
+    "question": "Please list the names of all the events of the Student_Club that had an attendance of over 20 students.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 135,
+    "question": "What is the average attendance of meetings in 2020?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 136,
+    "question": "List the full name of all the members of the Student_Club who attended the \"Laugh Out Loud\" event.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 137,
+    "question": "What is the amount of the funds that the Vice President received?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 138,
+    "question": "How much did the Student_Club members spend on advertisement in September Meeting?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 139,
+    "question": "What is the total budgeted amount for all category in \"October Speaker\" event?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 140,
+    "question": "Was each expense in October Meeting on October 8, 2019 approved?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 141,
+    "question": "What is the status of the event which bought \"Post Cards, Posters\" on 2019/8/20?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 142,
+    "question": "State the major name for the Vice President of the club.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 143,
+    "question": "Which department was the President of the club in?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 144,
+    "question": "State the date Connor Hilton paid his/her dues.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 145,
+    "question": "Who was the first one paid his/her dues? Tell the full name.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 146,
+    "question": "List all the members who attended the event \"October Meeting\".",
+    "db_id": "student_club"
+  },
+  {
+    "index": 147,
+    "question": "List all the expenses incurred by the vice president.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 148,
+    "question": "How many members attended the \"Women's Soccer\" event?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 149,
+    "question": "When did the member, Casey Mason, received the income?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 150,
+    "question": "How many events did the member with the phone number \"954-555-6240\" attend?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 151,
+    "question": "Among all the closed events, which event has the highest spend-to-budget ratio?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 152,
+    "question": "List the name of students that have attended more than 7 events.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 153,
+    "question": "Among the students majored in interior design, who have attended the Community Theater event?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 154,
+    "question": "Which student has been entrusted to manage the budget for the Yearly Kickoff?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 155,
+    "question": "Which students manage to generate the highest income. State his/her full name along with the income source.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 156,
+    "question": "How many members did attend the event 'Community Theater' in 2019?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 157,
+    "question": "Provide the number of events attended by Luisa Guidi. What is her major?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 158,
+    "question": "Did Maya Mclean attend the 'Women's Soccer' event?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 159,
+    "question": "Indicate the cost of posters for 'September Speaker' event.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 160,
+    "question": "Identify the type of expenses and their total value approved for 'October Meeting' event.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 161,
+    "question": "List out the full name and total cost that member id \"rec4BLdZHS2Blfp4v\" incurred?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 162,
+    "question": "State what kind of expenses that Sacha Harrison incurred?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 163,
+    "question": "What kind of expenses incurred by members who have X-Large in size of tee shirt?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 164,
+    "question": "Mention the zip code of member who incurred less than 50USD.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 165,
+    "question": "List out the position of members who joined major of Business.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 166,
+    "question": "How many members of Business have the Medium size of tee shirt?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 167,
+    "question": "State the name of major that Vice President has joined.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 168,
+    "question": "What is the name of the social event that was attended by the vice president of the Student_Club located at 900 E. Washington St.?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 169,
+    "question": "What is the last name and position of the student that bought pizza on 09/10/2019?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 170,
+    "question": "List the last name of the members of the club that attended the women's soccer event.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 171,
+    "question": "Please provide links to events for members who have paid more than 50 dollar.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 172,
+    "question": "Which members who were approved from 1/10/2019 to 11/19/2019? Please identify the member who attended the event and the link to their event.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 173,
+    "question": "List emails of people who paid more than 20 dollars from 9/10/2019 to 11/19/2019.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 174,
+    "question": "Find the name and date of events with expenses for pizza that were more than fifty dollars but less than a hundred dollars.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 175,
+    "question": "What is the name and major of members who had to spend more than a hundred dollars on an expense?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 176,
+    "question": "In the events with more than forty incomes, list the city and country in which the event is happening.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 177,
+    "question": "Among the members who incurred expenses in more than one event, who paid the most amount?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 178,
+    "question": "What is the average amount paid by students in a position other than a member?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 179,
+    "question": "Which budget allowed the most money for water, chips, and cookies?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 180,
+    "question": "List the full name of the top five members who spend the most money in the descending order of spending.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 181,
+    "question": "Give the full name and contact number of members who had to spend more than average on each expense.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 182,
+    "question": "Write the full name of the member who spent money for water, veggie tray and supplies and include the cost of it.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 183,
+    "question": "What category was budgeted for the 'January Speaker' event and how much was the amount budgeted for that category?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 184,
+    "question": "Which budget category does the expense 'Posters' fall to?",
+    "db_id": "student_club"
+  },
+  {
+    "index": 185,
+    "question": "Write the full name of the club member with the position of 'Secretary' and list which college the club member belongs to.",
+    "db_id": "student_club"
+  },
+  {
+    "index": 186,
+    "question": "Which student has the hometown of Lincolnton, North Carolina with the zip code of 28092? List their full name and position.",
+    "db_id": "student_club"
+  }
+]
+
+

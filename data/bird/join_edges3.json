@@ -1,0 +1,92 @@
+{
+  "student_club#sep#budget-student_club#sep#event": {
+    "student_club#sep#budget#sep#event_status-student_club#sep#event#sep#status": {
+      "jaccard": 1.0,
+      "uniqueness": 0.07142857142857142,
+      "combined_score": 0.9223170042037965
+    },
+    "student_club#sep#budget#sep#event_name-student_club#sep#event#sep#event_name": {
+      "jaccard": 0.5897435897435898,
+      "uniqueness": 0.9285714285714286,
+      "combined_score": 0.7468073091445826
+    }
+  },
+  "student_club#sep#budget-student_club#sep#expense": {
+    "student_club#sep#budget#sep#budget_id-student_club#sep#expense#sep#link_to_budget": {
+      "jaccard": 0.46153846153846156,
+      "uniqueness": 1.0,
+      "combined_score": 0.5396300485500922
+    }
+  },
+  "student_club#sep#budget-student_club#sep#income": {
+    "student_club#sep#budget#sep#amount-student_club#sep#income#sep#amount": {
+      "jaccard": 0.0,
+      "uniqueness": 0.17307692307692307,
+      "combined_score": 0.47847205996513364
+    }
+  },
+  "student_club#sep#college-student_club#sep#department": {
+    "student_club#sep#college#sep#college_id-student_club#sep#department#sep#college_id": {
+      "jaccard": 1.0,
+      "uniqueness": 1.0,
+      "combined_score": 0.9408974885940551
+    }
+  },
+  "student_club#sep#department-student_club#sep#major": {
+    "student_club#sep#department#sep#dept_id-student_club#sep#major#sep#dept_id": {
+      "jaccard": 1.0,
+      "uniqueness": 1.0,
+      "combined_score": 0.9291700839996337
+    }
+  },
+  "student_club#sep#major-student_club#sep#member": {
+    "student_club#sep#major#sep#major_id-student_club#sep#member#sep#link_to_major": {
+      "jaccard": 0.22807017543859648,
+      "uniqueness": 1.0,
+      "combined_score": 0.44059664837101054
+    }
+  },
+  "student_club#sep#member_details-student_club#sep#member": {
+    "student_club#sep#member_details#sep#email-student_club#sep#member#sep#email": {
+      "jaccard": 1.0,
+      "uniqueness": 1.0,
+      "combined_score": 0.947697675228119
+    },
+    "student_club#sep#member_details#sep#phone-student_club#sep#member#sep#phone": {
+      "jaccard": 1.0,
+      "uniqueness": 1.0,
+      "combined_score": 0.9379015505313872
+    }
+  },
+  "student_club#sep#member-student_club#sep#zip_code": {
+    "student_club#sep#member#sep#zip-student_club#sep#zip_code#sep#zip_code": {
+      "jaccard": 0.0007880220646178094,
+      "uniqueness": 1.0,
+      "combined_score": 0.49137963214852476
+    }
+  },
+  "job_employee#sep#company-job_employee#sep#job": {
+    "job_employee#sep#company#sep#company_id-job_employee#sep#job#sep#company_id": {
+      "jaccard": 1.0,
+      "uniqueness": 1.0,
+      "combined_score": 0.9396255135536193
+    }
+  },
+  "job_employee#sep#job-job_employee#sep#employee": {
+    "job_employee#sep#job#sep#required_skill-job_employee#sep#employee#sep#skill_area": {
+      "jaccard": 1.0,
+      "uniqueness": 0.8333333333333334,
+      "combined_score": 0.7219969034194946
+    },
+    "job_employee#sep#job#sep#salary_offered_rs-job_employee#sep#employee#sep#expected_salary_rs": {
+      "jaccard": 0.08333333333333333,
+      "uniqueness": 1.0,
+      "combined_score": 0.444764628012975
+    },
+    "job_employee#sep#job#sep#experience_required_yrs-job_employee#sep#employee#sep#years_of_experience": {
+      "jaccard": 0.75,
+      "uniqueness": 0.6666666666666666,
+      "combined_score": 0.5899103224277497
+    }
+  }
+}

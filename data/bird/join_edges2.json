@@ -1,0 +1,256 @@
+{
+  "student_club#sep#budget-student_club#sep#event": {
+    "student_club#sep#budget#sep#event_status-student_club#sep#event#sep#status": {
+      "jaccard": 1.0,
+      "semantic": 0.8610105514526367,
+      "exact_col_match": 1.0,
+      "uniqueness": 0.07142857142857142,
+      "join_category": "Value-Based",
+      "combined_score": 0.958303165435791,
+      "type1": "text",
+      "type2": "text"
+    },
+    "student_club#sep#budget#sep#event_name-student_club#sep#event#sep#event_name": {
+      "jaccard": 0.5897435897435898,
+      "semantic": 0.8161865472793579,
+      "exact_col_match": 1.0,
+      "uniqueness": 0.9285714285714286,
+      "join_category": "Exact match",
+      "combined_score": 0.7807534000812433,
+      "type1": "text",
+      "type2": "text"
+    }
+  },
+  "student_club#sep#budget-student_club#sep#expense": {
+    "student_club#sep#budget#sep#budget_id-student_club#sep#expense#sep#link_to_budget": {
+      "jaccard": 0.46153846153846156,
+      "semantic": 0.8758945465087891,
+      "exact_col_match": 0.75,
+      "uniqueness": 1.0,
+      "join_category": "inferred PK-FK",
+      "combined_score": 0.6723837485680213,
+      "type1": "text",
+      "type2": "text"
+    },
+    "student_club#sep#budget#sep#spent-student_club#sep#expense#sep#cost": {
+      "jaccard": 0.3103448275862069,
+      "semantic": 0.8156478404998779,
+      "exact_col_match": 0.5,
+      "uniqueness": 0.65625,
+      "join_category": "Semantic",
+      "combined_score": 0.5188322831844462,
+      "type1": "real",
+      "type2": "real"
+    }
+  },
+  "student_club#sep#budget-student_club#sep#income": {
+    "student_club#sep#budget#sep#amount-student_club#sep#income#sep#amount": {
+      "jaccard": 0.0,
+      "semantic": 0.8120099306106567,
+      "exact_col_match": 0.75,
+      "uniqueness": 0.17307692307692307,
+      "join_category": "numeric type with high semantic match",
+      "combined_score": 0.468602979183197,
+      "type1": "integer",
+      "type2": "integer"
+    }
+  },
+  "student_club#sep#expense-student_club#sep#income": {
+    "student_club#sep#expense#sep#expense_date-student_club#sep#income#sep#date_received": {
+      "jaccard": 0.15,
+      "semantic": 0.7811100482940674,
+      "exact_col_match": 0.75,
+      "uniqueness": 0.8055555555555556,
+      "join_category": "Semantic",
+      "combined_score": 0.5193330144882202,
+      "type1": "text",
+      "type2": "text"
+    }
+  },
+  "student_club#sep#college-student_club#sep#department": {
+    "student_club#sep#college#sep#college_id-student_club#sep#department#sep#college_id": {
+      "jaccard": 1.0,
+      "semantic": 0.9160428643226624,
+      "exact_col_match": 1.0,
+      "uniqueness": 1.0,
+      "join_category": "inferred PK-FK",
+      "combined_score": 0.9748128592967988,
+      "type1": "text",
+      "type2": "text"
+    }
+  },
+  "student_club#sep#department-student_club#sep#major": {
+    "student_club#sep#department#sep#dept_id-student_club#sep#major#sep#dept_id": {
+      "jaccard": 1.0,
+      "semantic": 0.898639440536499,
+      "exact_col_match": 0.8,
+      "uniqueness": 1.0,
+      "join_category": "inferred PK-FK",
+      "combined_score": 0.9095918321609497,
+      "type1": "text",
+      "type2": "text"
+    }
+  },
+  "student_club#sep#major-student_club#sep#member": {
+    "student_club#sep#major#sep#major_id-student_club#sep#member#sep#link_to_major": {
+      "jaccard": 0.22807017543859648,
+      "semantic": 0.7864822745323181,
+      "exact_col_match": 0.75,
+      "uniqueness": 1.0,
+      "join_category": "Semantic",
+      "combined_score": 0.552172752535134,
+      "type1": "text",
+      "type2": "text"
+    }
+  },
+  "student_club#sep#member_details-student_club#sep#member": {
+    "student_club#sep#member_details#sep#email-student_club#sep#member#sep#email": {
+      "jaccard": 1.0,
+      "semantic": 0.9256406426429749,
+      "exact_col_match": 1.0,
+      "uniqueness": 1.0,
+      "join_category": "inferred PK-FK",
+      "combined_score": 0.9776921927928925,
+      "type1": "text",
+      "type2": "text"
+    },
+    "student_club#sep#member_details#sep#phone-student_club#sep#member#sep#phone": {
+      "jaccard": 1.0,
+      "semantic": 0.9436988830566406,
+      "exact_col_match": 1.0,
+      "uniqueness": 1.0,
+      "join_category": "inferred PK-FK",
+      "combined_score": 0.9831096649169921,
+      "type1": "text",
+      "type2": "text"
+    }
+  },
+  "student_club#sep#member-student_club#sep#zip_code": {
+    "student_club#sep#member#sep#zip-student_club#sep#zip_code#sep#zip_code": {
+      "jaccard": 0.0007880220646178094,
+      "semantic": 0.7708268165588379,
+      "exact_col_match": 0.75,
+      "uniqueness": 1.0,
+      "join_category": "numeric type with high semantic match",
+      "combined_score": 0.4565632537934985,
+      "type1": "integer",
+      "type2": "integer"
+    }
+  },
+  "job_employee#sep#company-job_employee#sep#job": {
+    "job_employee#sep#company#sep#company_id-job_employee#sep#job#sep#job_id": {
+      "jaccard": 0.0,
+      "semantic": 0.9276018738746643,
+      "exact_col_match": 1.0,
+      "uniqueness": 1.0,
+      "join_category": "numeric type with high semantic match",
+      "combined_score": 0.5782805621623992,
+      "type1": "int",
+      "type2": "int"
+    },
+    "job_employee#sep#company#sep#company_id-job_employee#sep#job#sep#company_id": {
+      "jaccard": 1.0,
+      "semantic": 0.9864643216133118,
+      "exact_col_match": 1.0,
+      "uniqueness": 1.0,
+      "join_category": "inferred PK-FK",
+      "combined_score": 0.9959392964839935,
+      "type1": "int",
+      "type2": "int"
+    },
+    "job_employee#sep#company#sep#company_id-job_employee#sep#job#sep#experience_required_yrs": {
+      "jaccard": 0.75,
+      "semantic": 0.5652578473091125,
+      "exact_col_match": 0.5,
+      "uniqueness": 1.0,
+      "join_category": "Value-Based",
+      "combined_score": 0.6195773541927339,
+      "type1": "int",
+      "type2": "int"
+    }
+  },
+  "job_employee#sep#company-job_employee#sep#employee": {
+    "job_employee#sep#company#sep#company_id-job_employee#sep#employee#sep#emp_id": {
+      "jaccard": 0.0,
+      "semantic": 0.7587826251983643,
+      "exact_col_match": 0.75,
+      "uniqueness": 1.0,
+      "join_category": "numeric type with high semantic match",
+      "combined_score": 0.45263478755950926,
+      "type1": "int",
+      "type2": "int"
+    },
+    "job_employee#sep#company#sep#company_id-job_employee#sep#employee#sep#years_of_experience": {
+      "jaccard": 0.6,
+      "semantic": 0.6419995427131653,
+      "exact_col_match": 0.5,
+      "uniqueness": 1.0,
+      "join_category": "Weak",
+      "combined_score": 0.5825998628139496,
+      "type1": "int",
+      "type2": "int"
+    }
+  },
+  "job_employee#sep#job-job_employee#sep#employee": {
+    "job_employee#sep#job#sep#job_id-job_employee#sep#employee#sep#emp_id": {
+      "jaccard": 0.0,
+      "semantic": 0.785971462726593,
+      "exact_col_match": 1.0,
+      "uniqueness": 1.0,
+      "join_category": "numeric type with high semantic match",
+      "combined_score": 0.5357914388179779,
+      "type1": "int",
+      "type2": "int"
+    },
+    "job_employee#sep#job#sep#company_id-job_employee#sep#employee#sep#emp_id": {
+      "jaccard": 0.0,
+      "semantic": 0.7769160866737366,
+      "exact_col_match": 0.75,
+      "uniqueness": 1.0,
+      "join_category": "numeric type with high semantic match",
+      "combined_score": 0.4580748260021209,
+      "type1": "int",
+      "type2": "int"
+    },
+    "job_employee#sep#job#sep#company_id-job_employee#sep#employee#sep#years_of_experience": {
+      "jaccard": 0.6,
+      "semantic": 0.6425316333770752,
+      "exact_col_match": 0.5,
+      "uniqueness": 0.6666666666666666,
+      "join_category": "Weak",
+      "combined_score": 0.5827594900131225,
+      "type1": "int",
+      "type2": "int"
+    },
+    "job_employee#sep#job#sep#required_skill-job_employee#sep#employee#sep#skill_area": {
+      "jaccard": 1.0,
+      "semantic": 0.7605550289154053,
+      "exact_col_match": 0.75,
+      "uniqueness": 0.8333333333333334,
+      "join_category": "Value-Based",
+      "combined_score": 0.8531665086746215,
+      "type1": "text",
+      "type2": "text"
+    },
+    "job_employee#sep#job#sep#salary_offered_rs-job_employee#sep#employee#sep#expected_salary_rs": {
+      "jaccard": 0.08333333333333333,
+      "semantic": 0.8199936747550964,
+      "exact_col_match": 0.8,
+      "uniqueness": 1.0,
+      "join_category": "inferred PK-FK",
+      "combined_score": 0.5193314357598622,
+      "type1": "decimal",
+      "type2": "decimal"
+    },
+    "job_employee#sep#job#sep#experience_required_yrs-job_employee#sep#employee#sep#years_of_experience": {
+      "jaccard": 0.75,
+      "semantic": 0.7447035312652588,
+      "exact_col_match": 0.6,
+      "uniqueness": 0.6666666666666666,
+      "join_category": "Value-Based",
+      "combined_score": 0.7034110593795777,
+      "type1": "int",
+      "type2": "int"
+    }
+  }
+}

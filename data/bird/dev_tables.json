@@ -1,0 +1,343 @@
+{
+  "student_club#sep#budget": {
+    "db_id": "student_club",
+    "table_name_original": "budget",
+    "table_name": "budget",
+    "column_names_original": [
+      "budget_id",
+      "category",
+      "spent",
+      "remaining",
+      "amount",
+      "event_status",
+      "event_name"
+    ],
+    "column_names": [
+      "budget id",
+      "category",
+      "spent",
+      "remaining",
+      "amount",
+      "event status",
+      "event_name"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "real",
+      "real",
+      "integer",
+      "text",
+      "text"
+    ],
+    "source": "unstructured"
+  },
+  "student_club#sep#event": {
+    "db_id": "student_club",
+    "table_name_original": "event",
+    "table_name": "event",
+    "column_names_original": [
+      "event_id",
+      "event_name",
+      "event_date",
+      "location",
+      "status"
+    ],
+    "column_names": [
+      "event id",
+      "event name",
+      "event date",
+      "location",
+      "status"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "text",
+      "text",
+      "text"
+    ],
+    "source": "unstructured"
+  },
+  "student_club#sep#expense": {
+    "db_id": "student_club",
+    "table_name_original": "expense",
+    "table_name": "expense",
+    "column_names_original": [
+      "expense_id",
+      "expense_date",
+      "cost",
+      "link_to_budget"
+    ],
+    "column_names": [
+      "expense id",
+      "expense date",
+      "cost",
+      "link to budget"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "real",
+      "text"
+    ],
+    "source": "unstructured"
+  },
+  "student_club#sep#income": {
+    "db_id": "student_club",
+    "table_name_original": "income",
+    "table_name": "income",
+    "column_names_original": [
+      "income_id",
+      "date_received",
+      "amount",
+      "source"
+    ],
+    "column_names": [
+      "income id",
+      "date received",
+      "amount",
+      "source"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "integer",
+      "text"
+    ],
+    "source": "unstructured"
+  },
+  "student_club#sep#college": {
+    "db_id": "student_club",
+    "table_name_original": "college",
+    "table_name": "college",
+    "column_names_original": [
+      "college_id",
+      "college_name"
+    ],
+    "column_names": [
+      "college id",
+      "college name"
+    ],
+    "column_types": [
+      "text",
+      "text"
+    ],
+    "source": "structured"
+  },
+  "student_club#sep#department": {
+    "db_id": "student_club",
+    "table_name_original": "department",
+    "table_name": "department",
+    "column_names_original": [
+      "dept_id",
+      "dept_name",
+      "college_id"
+    ],
+    "column_names": [
+      "dept id",
+      "dept name",
+      "college id"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "text"
+    ],
+    "source": "structured"
+  },
+  "student_club#sep#major": {
+    "db_id": "student_club",
+    "table_name_original": "major",
+    "table_name": "major",
+    "column_names_original": [
+      "major_id",
+      "major_name",
+      "dept_id"
+    ],
+    "column_names": [
+      "major id",
+      "major name",
+      "dept id"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "text"
+    ],
+    "source": "structured"
+  },
+  "student_club#sep#member_details": {
+    "db_id": "student_club",
+    "table_name_original": "member_details",
+    "table_name": "member details",
+    "column_names_original": [
+      "member_name",
+      "email",
+      "position",
+      "t_shirt_size",
+      "phone"
+    ],
+    "column_names": [
+      "member name",
+      "email",
+      "position",
+      "t shirt size",
+      "phone"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "text",
+      "text",
+      "text"
+    ],
+    "source": "unstructured"
+  },
+  "student_club#sep#member": {
+    "db_id": "student_club",
+    "table_name_original": "member",
+    "table_name": "member",
+    "column_names_original": [
+      "member_id",
+      "first_name",
+      "last_name",
+      "email",
+      "phone",
+      "zip",
+      "link_to_major"
+    ],
+    "column_names": [
+      "member id",
+      "first name",
+      "last name",
+      "email",
+      "phone",
+      "zip",
+      "link to major"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "integer",
+      "text"
+    ],
+    "source": "structured"
+  },
+  "student_club#sep#zip_code": {
+    "db_id": "student_club",
+    "table_name_original": "zip_code",
+    "table_name": "zip code",
+    "column_names_original": [
+      "zip_code",
+      "type",
+      "city",
+      "county",
+      "state",
+      "short_state"
+    ],
+    "column_names": [
+      "zip code",
+      "type",
+      "city",
+      "county",
+      "state",
+      "short state"
+    ],
+    "column_types": [
+      "integer",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text"
+    ],
+    "source": "structured"
+  },
+  "job_employee#sep#company": {
+    "db_id": "job_employee",
+    "table_name_original": "Company",
+    "table_name": "company",
+    "column_names_original": [
+      "company_id",
+      "company_name",
+      "location"
+    ],
+    "column_names": [
+      "company id",
+      "company name",
+      "location"
+    ],
+    "column_types": [
+      "int",
+      "text",
+      "text"
+    ],
+    "source": "structured"
+  },
+  "job_employee#sep#job": {
+    "db_id": "job_employee",
+    "table_name_original": "Job",
+    "table_name": "job",
+    "column_names_original": [
+      "job_id",
+      "company_id",
+      "job_title",
+      "required_skill",
+      "salary_offered_rs",
+      "experience_required_yrs"
+    ],
+    "column_names": [
+      "job id",
+      "company id",
+      "job title",
+      "required skill",
+      "salary offered rs",
+      "experience required yrs"
+    ],
+    "column_types": [
+      "int",
+      "int",
+      "text",
+      "text",
+      "decimal",
+      "int"
+    ],
+    "source": "unstructured"
+  },
+  "job_employee#sep#employee": {
+    "db_id": "job_employee",
+    "table_name_original": "Employee",
+    "table_name": "employee",
+    "column_names_original": [
+      "emp_id",
+      "emp_name",
+      "skill_area",
+      "expected_salary_rs",
+      "years_of_experience"
+    ],
+    "column_names": [
+      "emp id",
+      "emp name",
+      "skill area",
+      "expected salary rs",
+      "years of experience"
+    ],
+    "column_types": [
+      "int",
+      "text",
+      "text",
+      "decimal",
+      "int"
+    ],
+    "source": "structured"
+  }
+}
+
+
+
+
+

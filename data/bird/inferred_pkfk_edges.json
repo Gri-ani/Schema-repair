@@ -1,0 +1,68 @@
+[
+  {
+    "db_id": "student_club",
+    "table1": "student_club#sep#budget",
+    "table2": "student_club#sep#expense",
+    "col1": "budget_id",
+    "col2": "link_to_budget",
+    "uniqueness": 1.0,
+    "jaccard": 0.46153846153846156,
+    "semantic": 0.8758945465087891,
+    "combined_score": 0.6723837485680213
+  },
+  {
+    "db_id": "student_club",
+    "table1": "student_club#sep#college",
+    "table2": "student_club#sep#department",
+    "col1": "college_id",
+    "col2": "college_id",
+    "uniqueness": 1.0,
+    "jaccard": 1.0,
+    "semantic": 0.9160428643226624,
+    "combined_score": 0.9748128592967988
+  },
+  {
+    "db_id": "student_club",
+    "table1": "student_club#sep#department",
+    "table2": "student_club#sep#major",
+    "col1": "dept_id",
+    "col2": "dept_id",
+    "uniqueness": 1.0,
+    "jaccard": 1.0,
+    "semantic": 0.898639440536499,
+    "combined_score": 0.9095918321609497
+  },
+  {
+    "db_id": "student_club",
+    "table1": "student_club#sep#member_details",
+    "table2": "student_club#sep#member",
+    "col1": "email",
+    "col2": "email",
+    "uniqueness": 1.0,
+    "jaccard": 1.0,
+    "semantic": 0.9256406426429749,
+    "combined_score": 0.9776921927928925
+  },
+  {
+    "db_id": "student_club",
+    "table1": "student_club#sep#member_details",
+    "table2": "student_club#sep#member",
+    "col1": "phone",
+    "col2": "phone",
+    "uniqueness": 1.0,
+    "jaccard": 1.0,
+    "semantic": 0.9436988830566406,
+    "combined_score": 0.9831096649169921
+  },
+  {
+    "db_id": "job_employee",
+    "table1": "job_employee#sep#company",
+    "table2": "job_employee#sep#job",
+    "col1": "company_id",
+    "col2": "company_id",
+    "uniqueness": 1.0,
+    "jaccard": 1.0,
+    "semantic": 0.9864643216133118,
+    "combined_score": 0.9959392964839935
+  }
+]

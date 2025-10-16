@@ -1,0 +1,52 @@
+You are an analyst. Your task is to determine if any join between two database tables can correctly answer a given natural language query.
+
+Input:
+
+query → a natural language question
+
+schemas → JSON object describing the two tables and their columns
+
+join_candidates → JSON object with possible join columns between the tables
+
+Steps:
+
+Understand the query and exactly what it asks for.
+
+Examine the schemas of both tables to understand each column.
+
+Evaluate each candidate join provided in the JSON.
+
+Decide if any of these joins correctly relates the tables to answer the query.
+
+Rules:
+
+Only respond YES if you are 100% certain that at least one join can correctly answer the query.
+
+Respond NO if none of the joins can correctly capture the required relationship, or if the tables are irrelevant.
+
+Do not assume any relationships outside what is explicitly provided in the JSON.
+
+Output:
+
+Only YES or NO (nothing else).
+
+{
+  "query": "Match the employees to the jobs they are qualified for based on their skills?",
+  "schemas": {
+    "job_employee#sep#job": {
+      "columns": ["job_id", "company_id", "job_title", "required_skill", "salary_offered_rs", "experience_required_yrs"]
+    },
+    "job_employee#sep#employee": {
+      "columns": ["emp_id", "emp_name", "skill_area", "expected_salary_rs", "years_of_experience"]
+    }
+  },
+  "join_candidates": {
+    "job.job_id = employee.emp_id": {},
+    "job.company_id = employee.emp_id": {},
+    "job.company_id = employee.years_of_experience": {},
+    "job.required_skill = employee.skill_area": {},
+    "job.salary_offered_rs = employee.expected_salary_rs": {},
+    "job.experience_required_yrs = employee.years_of_experience": {}
+  }
+}
+Give 1 line reason then answer

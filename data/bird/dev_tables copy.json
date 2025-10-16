@@ -1,0 +1,767 @@
+{
+  "california_schools#sep#frpm": {
+    "db_id": "california_schools",
+    "table_name_original": "frpm",
+    "table_name": "free and reduced-price meals",
+    "column_names_original": [
+      "Academic Year",
+      "District Code",
+      "School Code",
+      "District Name",
+      "School Name",
+      "District Type",
+      "School Type",
+      "NSLP Provision Status",
+      "IRC",
+      "Low Grade",
+      "High Grade",
+      "Enrollment (K-12)",
+      "Free Meal Count (K-12)",
+      "Percent (%) Eligible Free (K-12)",
+      "FRPM Count (K-12)",
+      "Percent (%) Eligible FRPM (K-12)",
+      "Enrollment (Ages 5-17)",
+      "Free Meal Count (Ages 5-17)",
+      "Percent (%) Eligible Free (Ages 5-17)",
+      "FRPM Count (Ages 5-17)",
+      "Percent (%) Eligible FRPM (Ages 5-17)",
+      "2013-14 CALPADS Fall 1 Certification Status"
+    ],
+    "column_names": [
+      "Academic Year",
+      "District Code",
+      "School Code",
+      "District Name",
+      "School Name",
+      "District Type",
+      "School Type",
+      "NSLP Provision Status",
+      "IRC",
+      "Low Grade",
+      "High Grade",
+      "Enrollment (K-12)",
+      "Free Meal Count (K-12)",
+      "Percent (%) Eligible Free (K-12)",
+      "FRPM Count (K-12)",
+      "Percent (%) Eligible FRPM (K-12)",
+      "Enrollment (Ages 5-17)",
+      "Free Meal Count (Ages 5-17)",
+      "Percent (%) Eligible Free (Ages 5-17)",
+      "FRPM Count (Ages 5-17)",
+      "Percent (%) Eligible FRPM (Ages 5-17)",
+      "2013-14 CALPADS Fall 1 Certification Status"
+    ],
+    "column_types": [
+      "text",
+      "integer",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "integer",
+      "text",
+      "text",
+      "real",
+      "real",
+      "real",
+      "real",
+      "real",
+      "real",
+      "real",
+      "real",
+      "real",
+      "real",
+      "integer"
+    ],
+    "primary_keys": [
+      "cds"
+    ],
+    "foreign_keys": []
+  },
+
+  "california_schools#sep#satscores": {
+    "db_id": "california_schools",
+    "table_name_original": "satscores",
+    "table_name": "SAT scores",
+    "column_names_original": [
+      "cds",
+      "rtype",
+      "sname",
+      "dname",
+      "enroll12",
+      "NumTstTakr",
+      "AvgScrRead",
+      "AvgScrMath",
+      "AvgScrWrite",
+      "NumGE1500"
+    ],
+    "column_names": [
+      "cds",
+      "rtype",
+      "sname",
+      "dname",
+      "enroll12",
+      "NumTstTakr",
+      "AvgScrRead",
+      "AvgScrMath",
+      "AvgScrWrite",
+      "NumGE1500"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "text",
+      "text",
+      "integer",
+      "integer",
+      "integer",
+      "integer",
+      "integer",
+      "integer"
+    ],
+    "primary_keys": [
+      "cds"
+    ],
+    "foreign_keys": [
+      {
+        "column": "cds",
+        "ref_table": "schools",
+        "ref_column": "CDSCode"
+      }
+    ]
+  },
+  "california_schools#sep#schools": {
+    "db_id": "california_schools",
+    "table_name_original": "schools",
+    "table_name": "schools",
+    "column_names_original": [
+      "CDSCode",
+      "NCESDist",
+      "NCESSchool",
+      "StatusType",
+      "District",
+      "School",
+      "Street",
+      "StreetAbr",
+      "Zip",
+      "State",
+      "MailStreet",
+      "MailStrAbr",
+      "MailZip",
+      "MailState",
+      "Phone",
+      "Ext",
+      "OpenDate",
+      "ClosedDate",
+      "Charter",
+      "CharterNum",
+      "FundingType",
+      "DOC",
+      "DOCType",
+      "SOC",
+      "SOCType",
+      "EdOpsCode",
+      "EdOpsName",
+      "EILCode",
+      "EILName",
+      "GSoffered",
+      "GSserved",
+      "Virtual",
+      "Latitude",
+      "Longitude",
+      "AdmFName1",
+      "AdmLName1",
+      "AdmEmail1",
+      "AdmFName2",
+      "AdmLName2",
+      "AdmEmail2",
+      "AdmFName3",
+      "AdmLName3",
+      "AdmEmail3",
+      "LastUpdate"
+    ],
+    "column_names": [
+      "CDSCode",
+      "National Center for Educational Statistics school district identification number",
+      "National Center for Educational Statistics school identification number",
+      "Status Type",
+      "District",
+      "School",
+      "Street",
+      "street address",
+      "Zip",
+      "State",
+      "Mail Street",
+      "mailing street address",
+      "mailing zip",
+      "mailing state",
+      "Phone",
+      "extension",
+      "Open Date",
+      "Closed Date",
+      "Charter",
+      "Charter Num",
+      "Funding Type",
+      "District Ownership Code",
+      "The District Ownership Code Type",
+      "School Ownership Code",
+      "School Ownership Code Type",
+      "Education Option Code",
+      "Educational Option Name",
+      "Educational Instruction Level Code",
+      "Educational Instruction Level Name",
+      "grade span offered",
+      "grade span served.",
+      "Virtual",
+      "Latitude",
+      "Longitude",
+      "administrator's first name 1",
+      "administrator's last name 1",
+      "administrator's email address 1",
+      "administrator's first name 2",
+      "administrator's last name 2",
+      "administrator's email address 2",
+      "administrator's first name 3",
+      "administrator's last name 3",
+      "administrator's email address 3",
+      "Last Update"
+    ],
+    "column_types": [
+      "integer",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "date",
+      "date",
+      "integer",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "integer",
+      "real",
+      "real",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text"
+    ]
+  }, 
+  "superhero#sep#attribute": {
+    "db_id": "superhero",
+    "table_name_original": "attribute",
+    "table_name": "attribute",
+    "column_names_original": [
+      "id",
+      "attribute_name"
+    ],
+    "column_names": [
+      "id",
+      "attribute name"
+    ],
+    "column_types": [
+      "integer",
+      "text"
+    ]
+  },
+  "superhero#sep#colour": {
+    "db_id": "superhero",
+    "table_name_original": "colour",
+    "table_name": "colour",
+    "column_names_original": [
+      "id",
+      "colour"
+    ],
+    "column_names": [
+      "id",
+      "colour"
+    ],
+    "column_types": [
+      "integer",
+      "text"
+    ]
+  },
+  "superhero#sep#gender": {
+    "db_id": "superhero",
+    "table_name_original": "gender",
+    "table_name": "gender",
+    "column_names_original": [
+      "id",
+      "gender"
+    ],
+    "column_names": [
+      "id",
+      "gender"
+    ],
+    "column_types": [
+      "integer",
+      "text"
+    ]
+  },
+  "superhero#sep#publisher": {
+    "db_id": "superhero",
+    "table_name_original": "publisher",
+    "table_name": "publisher",
+    "column_names_original": [
+      "id",
+      "publisher_name"
+    ],
+    "column_names": [
+      "id",
+      "publisher_name"
+    ],
+    "column_types": [
+      "integer",
+      "text"
+    ]
+  },
+  "superhero#sep#race": {
+    "db_id": "superhero",
+    "table_name_original": "race",
+    "table_name": "race",
+    "column_names_original": [
+      "id",
+      "race"
+    ],
+    "column_names": [
+      "id",
+      "race"
+    ],
+    "column_types": [
+      "integer",
+      "text"
+    ]
+  },
+  "superhero#sep#superhero": {
+    "db_id": "superhero",
+    "table_name_original": "superhero",
+    "table_name": "superhero",
+    "column_names_original": [
+      "id",
+      "superhero_name",
+      "full_name",
+      "height_cm",
+      "weight_kg"
+    ],
+    "column_names": [
+      "id",
+      "superhero name",
+      "full name",
+      "height cm",
+      "weight kg"
+    ],
+    "column_types": [
+      "integer",
+      "text",
+      "text",
+      "integer",
+      "integer"
+    ]
+  },
+
+    "superhero#sep#superpower": {
+    "db_id": "superhero",
+    "table_name_original": "superpower",
+    "table_name": "superpower",
+    "column_names_original": [
+      "id",
+      "power_name"
+    ],
+    "column_names": [
+      "id",
+      "power name"
+    ],
+    "column_types": [
+      "integer",
+      "integer"
+    ]
+  },
+  "superhero#sep#hero_attribute": {
+    "db_id": "superhero",
+    "table_name_original": "hero_attribute",
+    "table_name": "hero attribute",
+    "column_names_original": [
+      "hero_id",
+      "attribute_id",
+      "attribute_value"
+    ],
+    "column_names": [
+      "hero id",
+      "attribute id",
+      "attribute value"
+    ],
+    "column_types": [
+      "integer",
+      "integer",
+      "integer"
+    ]
+  },
+  "student_club#sep#budget": {
+    "db_id": "student_club",
+    "table_name_original": "budget",
+    "table_name": "budget",
+    "column_names_original": [
+      "budget_id",
+      "category",
+      "spent",
+      "remaining",
+      "amount",
+      "event_status",
+      "event_name"
+    ],
+    "column_names": [
+      "budget id",
+      "category",
+      "spent",
+      "remaining",
+      "amount",
+      "event status",
+      "event_name"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "real",
+      "real",
+      "integer",
+      "text",
+      "text"
+    ],
+    "source": "unstructured"
+  },
+  "student_club#sep#event": {
+    "db_id": "student_club",
+    "table_name_original": "event",
+    "table_name": "event",
+    "column_names_original": [
+      "event_id",
+      "event_name",
+      "event_date",
+      "location",
+      "status"
+    ],
+    "column_names": [
+      "event id",
+      "event name",
+      "event date",
+      "location",
+      "status"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "text",
+      "text",
+      "text"
+    ],
+    "source": "unstructured"
+  },
+  "student_club#sep#expense": {
+    "db_id": "student_club",
+    "table_name_original": "expense",
+    "table_name": "expense",
+    "column_names_original": [
+      "expense_id",
+      "expense_date",
+      "cost",
+      "link_to_budget"
+    ],
+    "column_names": [
+      "expense id",
+      "expense date",
+      "cost",
+      "link to budget"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "real",
+      "text"
+    ],
+    "source": "unstructured"
+  },
+  "student_club#sep#income": {
+    "db_id": "student_club",
+    "table_name_original": "income",
+    "table_name": "income",
+    "column_names_original": [
+      "income_id",
+      "date_received",
+      "amount",
+      "source"
+    ],
+    "column_names": [
+      "income id",
+      "date received",
+      "amount",
+      "source"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "integer",
+      "text"
+    ],
+    "source": "unstructured"
+  },
+  "student_club#sep#college": {
+    "db_id": "student_club",
+    "table_name_original": "college",
+    "table_name": "college",
+    "column_names_original": [
+      "college_id",
+      "college_name"
+    ],
+    "column_names": [
+      "college id",
+      "college name"
+    ],
+    "column_types": [
+      "text",
+      "text"
+    ],
+    "source": "structured"
+  },
+  "student_club#sep#department": {
+    "db_id": "student_club",
+    "table_name_original": "department",
+    "table_name": "department",
+    "column_names_original": [
+      "dept_id",
+      "dept_name",
+      "college_id"
+    ],
+    "column_names": [
+      "dept id",
+      "dept name",
+      "college id"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "text"
+    ],
+    "source": "structured"
+  },
+  "student_club#sep#major": {
+    "db_id": "student_club",
+    "table_name_original": "major",
+    "table_name": "major",
+    "column_names_original": [
+      "major_id",
+      "major_name",
+      "dept_id"
+    ],
+    "column_names": [
+      "major id",
+      "major name",
+      "dept id"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "text"
+    ],
+    "source": "structured"
+  },
+  "student_club#sep#member_details": {
+    "db_id": "student_club",
+    "table_name_original": "member_details",
+    "table_name": "member details",
+    "column_names_original": [
+      "member_name",
+      "email",
+      "position",
+      "t_shirt_size",
+      "phone"
+    ],
+    "column_names": [
+      "member name",
+      "email",
+      "position",
+      "t shirt size",
+      "phone"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "text",
+      "text",
+      "text"
+    ],
+    "source": "unstructured"
+  },
+  "student_club#sep#member": {
+    "db_id": "student_club",
+    "table_name_original": "member",
+    "table_name": "member",
+    "column_names_original": [
+      "member_id",
+      "first_name",
+      "last_name",
+      "email",
+      "phone",
+      "zip",
+      "link_to_major"
+    ],
+    "column_names": [
+      "member id",
+      "first name",
+      "last name",
+      "email",
+      "phone",
+      "zip",
+      "link to major"
+    ],
+    "column_types": [
+      "text",
+      "text",
+      "text",
+      "text",
+      "text",
+      "integer",
+      "text"
+    ],
+    "source": "structured"
+  },
+  "student_club#sep#zip_code": {
+    "db_id": "student_club",
+    "table_name_original": "zip_code",
+    "table_name": "zip code",
+    "column_names_original": [
+      "zip_code",
+      "type",
+      "city",
+      "county",
+      "state",
+      "short_state"
+    ],
+    "column_names": [
+      "zip code",
+      "type",
+      "city",
+      "county",
+      "state",
+      "short state"
+    ],
+    "column_types": [
+      "integer",
+      "text",
+      "text",
+      "text",
+      "text",
+      "text"
+    ],
+    "source": "structured"
+  },
+  "job_employee#sep#company": {
+    "db_id": "job_employee",
+    "table_name_original": "Company",
+    "table_name": "company",
+    "column_names_original": [
+      "company_id",
+      "company_name",
+      "location"
+    ],
+    "column_names": [
+      "company id",
+      "company name",
+      "location"
+    ],
+    "column_types": [
+      "int",
+      "text",
+      "text"
+    ],
+    "source": "structured"
+  },
+  "job_employee#sep#job": {
+    "db_id": "job_employee",
+    "table_name_original": "Job",
+    "table_name": "job",
+    "column_names_original": [
+      "job_id",
+      "company_id",
+      "job_title",
+      "required_skill",
+      "salary_offered_rs",
+      "experience_required_yrs"
+    ],
+    "column_names": [
+      "job id",
+      "company id",
+      "job title",
+      "required skill",
+      "salary offered rs",
+      "experience required yrs"
+    ],
+    "column_types": [
+      "int",
+      "int",
+      "text",
+      "text",
+      "decimal",
+      "int"
+    ],
+    "source": "unstructured"
+  },
+  "job_employee#sep#employee": {
+    "db_id": "job_employee",
+    "table_name_original": "Employee",
+    "table_name": "employee",
+    "column_names_original": [
+      "emp_id",
+      "emp_name",
+      "skill_area",
+      "expected_salary_rs",
+      "years_of_experience"
+    ],
+    "column_names": [
+      "emp id",
+      "emp name",
+      "skill area",
+      "expected salary rs",
+      "years of experience"
+    ],
+    "column_types": [
+      "int",
+      "text",
+      "text",
+      "decimal",
+      "int"
+    ],
+    "source": "structured"
+  }
+}
+
+
+
+
+
