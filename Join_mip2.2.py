@@ -7,7 +7,7 @@ import pickle
 import os
 from groq import Groq
  
-client = Groq(api_key="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")
+
 
 def get_skip_idxs(dataset: str):
   qs = read_json(f'./jar2-main/data/{dataset}/dev.json')  # Fix path
@@ -835,4 +835,5 @@ if __name__ == '__main__':
 #   print(fn)
 #   preds = assign_columns(model, q_scores, dq_scores, dataset, t_num, w, num_partitions, args.partition, fn)
 #   # merge(num_partitions, fn, 'json')
+
 #   # eval_preds(dataset, read_json(f'{fn}.json'))
