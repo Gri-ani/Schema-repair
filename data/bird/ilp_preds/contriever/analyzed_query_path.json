@@ -1,0 +1,1627 @@
+[
+    {
+        "query": "Find the employees and their corresponding job titles",
+        "db_id": "job_employee",
+        "optimized_paths": [
+            "job",
+            "employee"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "job",
+                    "employee"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "job-employee": [
+                {
+                    "table1_column": "job.required_skill",
+                    "table2_column": "employee.skill_area",
+                    "jaccard": 1.0,
+                    "uniqueness": 0.8333333333333334
+                },
+                {
+                    "table1_column": "job.salary_offered_rs",
+                    "table2_column": "employee.expected_salary_rs",
+                    "jaccard": 0.08333333333333333,
+                    "uniqueness": 1.0
+                },
+                {
+                    "table1_column": "job.experience_required_yrs",
+                    "table2_column": "employee.years_of_experience",
+                    "jaccard": 0.75,
+                    "uniqueness": 0.6666666666666666
+                }
+            ]
+        },
+        "subquery_tables": {
+            "employees": {
+                "employee": [
+                    "skill area",
+                    "emp name"
+                ]
+            },
+            "job_titles": {
+                "job": [
+                    "job title",
+                    "job id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Give all the job applications of the employees",
+        "db_id": "job_employee",
+        "optimized_paths": [
+            "job",
+            "employee"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "job",
+                    "employee"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "job-employee": [
+                {
+                    "table1_column": "job.required_skill",
+                    "table2_column": "employee.skill_area",
+                    "jaccard": 1.0,
+                    "uniqueness": 0.8333333333333334
+                },
+                {
+                    "table1_column": "job.salary_offered_rs",
+                    "table2_column": "employee.expected_salary_rs",
+                    "jaccard": 0.08333333333333333,
+                    "uniqueness": 1.0
+                },
+                {
+                    "table1_column": "job.experience_required_yrs",
+                    "table2_column": "employee.years_of_experience",
+                    "jaccard": 0.75,
+                    "uniqueness": 0.6666666666666666
+                }
+            ]
+        },
+        "subquery_tables": {
+            "job_applications": {
+                "job": [
+                    "job id",
+                    "job title"
+                ]
+            },
+            "employees": {
+                "employee": [
+                    "skill area",
+                    "emp name"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Give the job_id's and the job_titles for all the jobs employees applied for",
+        "db_id": "job_employee",
+        "optimized_paths": [
+            "job"
+        ],
+        "edges_to_check": [
+            [
+                "job"
+            ]
+        ],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "jobs:id": {
+                "job": [
+                    "job id",
+                    "company id"
+                ]
+            },
+            "jobs:title": {
+                "job": [
+                    "job title",
+                    "job id"
+                ]
+            },
+            "employees:job_applications": {
+                "job": [
+                    "job id",
+                    "job title"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Match the employees to the jobs they are qualified for based on their skills",
+        "db_id": "job_employee",
+        "optimized_paths": [
+            "job",
+            "employee"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "job",
+                    "employee"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "job-employee": [
+                {
+                    "table1_column": "job.required_skill",
+                    "table2_column": "employee.skill_area",
+                    "jaccard": 1.0,
+                    "uniqueness": 0.8333333333333334
+                },
+                {
+                    "table1_column": "job.salary_offered_rs",
+                    "table2_column": "employee.expected_salary_rs",
+                    "jaccard": 0.08333333333333333,
+                    "uniqueness": 1.0
+                },
+                {
+                    "table1_column": "job.experience_required_yrs",
+                    "table2_column": "employee.years_of_experience",
+                    "jaccard": 0.75,
+                    "uniqueness": 0.6666666666666666
+                }
+            ]
+        },
+        "subquery_tables": {
+            "employees": {
+                "employee": [
+                    "skill area",
+                    "emp name"
+                ]
+            },
+            "jobs": {
+                "job": [
+                    "job title",
+                    "required skill"
+                ]
+            },
+            "skills": {
+                "job": [
+                    "required skill"
+                ],
+                "employee": [
+                    "skill area"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Tell me the posting date for job",
+        "db_id": "job_employee",
+        "optimized_paths": [
+            "job"
+        ],
+        "edges_to_check": [
+            [
+                "job"
+            ]
+        ],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "jobs:posting_date": {
+                "job": [
+                    "job title",
+                    "job id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Tell me the names of all the employees and their skills",
+        "db_id": "job_employee",
+        "optimized_paths": [
+            "job"
+        ],
+        "edges_to_check": [
+            [
+                "job"
+            ]
+        ],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "employees:name": {
+                "job": [
+                    "job title",
+                    "company id"
+                ]
+            },
+            "employees:skills": {
+                "job": [
+                    "required skill",
+                    "job title"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Match the employees to the jobs they are qualified for based on their number of experience years.",
+        "db_id": "job_employee",
+        "optimized_paths": [
+            "job",
+            "employee"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "job",
+                    "employee"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "job-employee": [
+                {
+                    "table1_column": "job.required_skill",
+                    "table2_column": "employee.skill_area",
+                    "jaccard": 1.0,
+                    "uniqueness": 0.8333333333333334
+                },
+                {
+                    "table1_column": "job.salary_offered_rs",
+                    "table2_column": "employee.expected_salary_rs",
+                    "jaccard": 0.08333333333333333,
+                    "uniqueness": 1.0
+                },
+                {
+                    "table1_column": "job.experience_required_yrs",
+                    "table2_column": "employee.years_of_experience",
+                    "jaccard": 0.75,
+                    "uniqueness": 0.6666666666666666
+                }
+            ]
+        },
+        "subquery_tables": {
+            "employees:experience years": {
+                "employee": [
+                    "years of experience"
+                ],
+                "job": [
+                    "experience required yrs"
+                ]
+            },
+            "jobs:required experience years": {
+                "job": [
+                    "experience required yrs"
+                ],
+                "employee": [
+                    "years of experience"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Match the employees to the jobs they are interested in based on their salary expectations.",
+        "db_id": "job_employee",
+        "optimized_paths": [
+            "job",
+            "employee"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "job",
+                    "employee"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "job-employee": [
+                {
+                    "table1_column": "job.required_skill",
+                    "table2_column": "employee.skill_area",
+                    "jaccard": 1.0,
+                    "uniqueness": 0.8333333333333334
+                },
+                {
+                    "table1_column": "job.salary_offered_rs",
+                    "table2_column": "employee.expected_salary_rs",
+                    "jaccard": 0.08333333333333333,
+                    "uniqueness": 1.0
+                },
+                {
+                    "table1_column": "job.experience_required_yrs",
+                    "table2_column": "employee.years_of_experience",
+                    "jaccard": 0.75,
+                    "uniqueness": 0.6666666666666666
+                }
+            ]
+        },
+        "subquery_tables": {
+            "employees:salary expectations": {
+                "employee": [
+                    "expected salary rs",
+                    "skill area"
+                ]
+            },
+            "jobs:salary": {
+                "job": [
+                    "salary offered rs"
+                ],
+                "employee": [
+                    "expected salary rs"
+                ]
+            }
+        }
+    },
+    {
+        "query": "How many students of the Student_Club have attended the event \"Women's Soccer\"?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "event"
+            ],
+            [
+                "college"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "students:club": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            },
+            "students:event": {
+                "event": [
+                    "event name",
+                    "event date"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Please list the phone numbers of the students from the Student_Club that has attended the event \"Women's Soccer\".",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "event",
+            "department",
+            "member"
+        ],
+        "edges_to_check": [
+            [
+                "event"
+            ],
+            [
+                [
+                    "major",
+                    "department"
+                ],
+                [
+                    "member",
+                    "major"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "member-major": [
+                {
+                    "table1_column": "member.major_id",
+                    "table2_column": "major.link_to_major",
+                    "jaccard": 0.22807017543859648,
+                    "uniqueness": 1.0
+                }
+            ],
+            "major-department": [
+                {
+                    "table1_column": "major.dept_id",
+                    "table2_column": "department.dept_id",
+                    "jaccard": 1.0,
+                    "uniqueness": 1.0
+                }
+            ]
+        },
+        "subquery_tables": {
+            "students:club": {
+                "member": [
+                    "link to major",
+                    "phone"
+                ]
+            },
+            "students:event": {
+                "event": [
+                    "event name",
+                    "event date"
+                ]
+            },
+            "students:phone number": {
+                "member": [
+                    "phone"
+                ],
+                "department": [
+                    "college id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Among the students from the Student_Club who attended the event \"Women's Soccer\", how many of them want a T-shirt that's in medium size?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "event",
+            "member_details",
+            "member"
+        ],
+        "edges_to_check": [
+            [
+                "event"
+            ],
+            [
+                [
+                    "member_details",
+                    "member"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "member_details-member": [
+                {
+                    "table1_column": "member_details.email",
+                    "table2_column": "member.email",
+                    "jaccard": 1.0,
+                    "uniqueness": 1.0
+                },
+                {
+                    "table1_column": "member_details.phone",
+                    "table2_column": "member.phone",
+                    "jaccard": 1.0,
+                    "uniqueness": 1.0
+                }
+            ]
+        },
+        "subquery_tables": {
+            "students:club": {
+                "member": [
+                    "link to major",
+                    "phone"
+                ]
+            },
+            "students:event": {
+                "event": [
+                    "event name",
+                    "event date"
+                ]
+            },
+            "students:T-shirt size": {
+                "member_details": [
+                    "t shirt size"
+                ],
+                "member": [
+                    "link to major"
+                ]
+            }
+        }
+    },
+    {
+        "query": "What is the event that has the highest attendance of the students from the Student_Club?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "event"
+            ],
+            [
+                "college"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "event:attendance": {
+                "event": [
+                    "status",
+                    "event date"
+                ]
+            },
+            "students:club": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Please list the event names of all the events attended by Maya Mclean.",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "event"
+            ],
+            [
+                "college"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "student:name": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            },
+            "event:name": {
+                "event": [
+                    "event name",
+                    "event id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "How many events of the Student_Club did Sacha Harrison attend in 2019?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "event"
+            ],
+            [
+                "college"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "student:name": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            },
+            "students:club": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            },
+            "event:year": {
+                "event": [
+                    "event date",
+                    "event name"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Among the events attended by more than 10 members of the Student_Club, how many of them are meetings?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "event"
+            ],
+            [
+                "college"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "event:attendance": {
+                "event": [
+                    "status",
+                    "event date"
+                ]
+            },
+            "students:club": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            },
+            "event:type": {
+                "event": [
+                    "event name",
+                    "event id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Please list the names of all the events of the Student_Club that had an attendance of over 20 students.",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "event"
+            ],
+            [
+                "college"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "event:name": {
+                "event": [
+                    "event name",
+                    "event id"
+                ]
+            },
+            "event:attendance": {
+                "event": [
+                    "status",
+                    "event date"
+                ]
+            },
+            "students:club": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "What is the average attendance of meetings in 2020?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "event"
+        ],
+        "edges_to_check": [
+            [
+                "event"
+            ]
+        ],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "event:attendance": {
+                "event": [
+                    "status",
+                    "event date"
+                ]
+            },
+            "event:type": {
+                "event": [
+                    "event name",
+                    "event id"
+                ]
+            },
+            "event:year": {
+                "event": [
+                    "event date",
+                    "event name"
+                ]
+            }
+        }
+    },
+    {
+        "query": "List the full name of all the members of the Student_Club who attended the \"Laugh Out Loud\" event.",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "event"
+            ],
+            [
+                "member"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "member:full name": {
+                "member": [
+                    "last name",
+                    "first name"
+                ]
+            },
+            "students:club": {
+                "member": [
+                    "link to major",
+                    "phone"
+                ]
+            },
+            "students:event": {
+                "event": [
+                    "event name",
+                    "event date"
+                ]
+            }
+        }
+    },
+    {
+        "query": "What is the amount of the funds that the Vice President received?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "member_details"
+            ],
+            [
+                "budget"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "funds:amount": {
+                "budget": [
+                    "amount",
+                    "remaining"
+                ]
+            },
+            "member:position": {
+                "member_details": [
+                    "position",
+                    "member name"
+                ]
+            }
+        }
+    },
+    {
+        "query": "How much did the Student_Club members spend on advertisement in September Meeting?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "event",
+            "expense",
+            "college"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "expense",
+                    "budget"
+                ],
+                [
+                    "budget",
+                    "event"
+                ]
+            ],
+            [
+                "college"
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "expense-budget": [
+                {
+                    "table1_column": "expense.budget_id",
+                    "table2_column": "budget.link_to_budget",
+                    "jaccard": 0.46153846153846156,
+                    "uniqueness": 1.0
+                }
+            ],
+            "budget-event": [
+                {
+                    "table1_column": "budget.event_status",
+                    "table2_column": "event.status",
+                    "jaccard": 1.0,
+                    "uniqueness": 0.07142857142857142
+                },
+                {
+                    "table1_column": "budget.event_name",
+                    "table2_column": "event.event_name",
+                    "jaccard": 0.5897435897435898,
+                    "uniqueness": 0.9285714285714286
+                }
+            ]
+        },
+        "subquery_tables": {
+            "students:club": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            },
+            "expense:advertisement": {
+                "expense": [
+                    "link to budget",
+                    "expense id"
+                ]
+            },
+            "event:name": {
+                "event": [
+                    "event name",
+                    "event id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "What is the total budgeted amount for all category in \"October Speaker\" event?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "event",
+            "budget"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "event",
+                    "budget"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "event-budget": [
+                {
+                    "table1_column": "event.event_status",
+                    "table2_column": "budget.status",
+                    "jaccard": 1.0,
+                    "uniqueness": 0.07142857142857142
+                },
+                {
+                    "table1_column": "event.event_name",
+                    "table2_column": "budget.event_name",
+                    "jaccard": 0.5897435897435898,
+                    "uniqueness": 0.9285714285714286
+                }
+            ]
+        },
+        "subquery_tables": {
+            "budget:amount": {
+                "budget": [
+                    "amount",
+                    "spent"
+                ]
+            },
+            "budget:category": {
+                "budget": [
+                    "category",
+                    "budget id"
+                ]
+            },
+            "event:name": {
+                "event": [
+                    "event name",
+                    "event id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Was each expense in October Meeting on October 8, 2019 approved?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "budget",
+            "expense",
+            "event"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "event",
+                    "budget"
+                ],
+                [
+                    "expense",
+                    "budget"
+                ],
+                [
+                    "budget",
+                    "event"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "expense-budget": [
+                {
+                    "table1_column": "expense.budget_id",
+                    "table2_column": "budget.link_to_budget",
+                    "jaccard": 0.46153846153846156,
+                    "uniqueness": 1.0
+                }
+            ],
+            "budget-event": [
+                {
+                    "table1_column": "budget.event_status",
+                    "table2_column": "event.status",
+                    "jaccard": 1.0,
+                    "uniqueness": 0.07142857142857142
+                },
+                {
+                    "table1_column": "budget.event_name",
+                    "table2_column": "event.event_name",
+                    "jaccard": 0.5897435897435898,
+                    "uniqueness": 0.9285714285714286
+                }
+            ],
+            "event-budget": [
+                {
+                    "table1_column": "event.event_status",
+                    "table2_column": "budget.status",
+                    "jaccard": 1.0,
+                    "uniqueness": 0.07142857142857142
+                },
+                {
+                    "table1_column": "event.event_name",
+                    "table2_column": "budget.event_name",
+                    "jaccard": 0.5897435897435898,
+                    "uniqueness": 0.9285714285714286
+                }
+            ]
+        },
+        "subquery_tables": {
+            "expense:approval status": {
+                "expense": [
+                    "expense id"
+                ],
+                "budget": [
+                    "event status"
+                ]
+            },
+            "event:name": {
+                "event": [
+                    "event name",
+                    "event id"
+                ]
+            },
+            "event:date": {
+                "event": [
+                    "event date",
+                    "event name"
+                ]
+            }
+        }
+    },
+    {
+        "query": "What is the status of the event which bought \"Post Cards, Posters\" on 2019/8/20?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "expense",
+            "budget",
+            "event"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "expense",
+                    "budget"
+                ],
+                [
+                    "budget",
+                    "event"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "expense-budget": [
+                {
+                    "table1_column": "expense.budget_id",
+                    "table2_column": "budget.link_to_budget",
+                    "jaccard": 0.46153846153846156,
+                    "uniqueness": 1.0
+                }
+            ],
+            "budget-event": [
+                {
+                    "table1_column": "budget.event_status",
+                    "table2_column": "event.status",
+                    "jaccard": 1.0,
+                    "uniqueness": 0.07142857142857142
+                },
+                {
+                    "table1_column": "budget.event_name",
+                    "table2_column": "event.event_name",
+                    "jaccard": 0.5897435897435898,
+                    "uniqueness": 0.9285714285714286
+                }
+            ]
+        },
+        "subquery_tables": {
+            "event:status": {
+                "event": [
+                    "status",
+                    "event id"
+                ]
+            },
+            "expense:item": {
+                "expense": [
+                    "expense id",
+                    "link to budget"
+                ]
+            },
+            "event:date": {
+                "event": [
+                    "event date",
+                    "event name"
+                ]
+            }
+        }
+    },
+    {
+        "query": "State the major name for the Vice President of the club.",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "member_details",
+            "member"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "member_details",
+                    "member"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "member_details-member": [
+                {
+                    "table1_column": "member_details.email",
+                    "table2_column": "member.email",
+                    "jaccard": 1.0,
+                    "uniqueness": 1.0
+                },
+                {
+                    "table1_column": "member_details.phone",
+                    "table2_column": "member.phone",
+                    "jaccard": 1.0,
+                    "uniqueness": 1.0
+                }
+            ]
+        },
+        "subquery_tables": {
+            "member:major": {
+                "member": [
+                    "link to major",
+                    "member id"
+                ]
+            },
+            "member:position": {
+                "member_details": [
+                    "position"
+                ],
+                "member": [
+                    "member id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Which department was the President of the club in?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "member_details",
+            "member"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "member_details",
+                    "member"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "member_details-member": [
+                {
+                    "table1_column": "member_details.email",
+                    "table2_column": "member.email",
+                    "jaccard": 1.0,
+                    "uniqueness": 1.0
+                },
+                {
+                    "table1_column": "member_details.phone",
+                    "table2_column": "member.phone",
+                    "jaccard": 1.0,
+                    "uniqueness": 1.0
+                }
+            ]
+        },
+        "subquery_tables": {
+            "member:department": {
+                "member": [
+                    "member id",
+                    "first name"
+                ]
+            },
+            "member:position": {
+                "member_details": [
+                    "position"
+                ],
+                "member": [
+                    "member id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "State the date Connor Hilton paid his/her dues.",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "member"
+            ],
+            [
+                "income"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "member:name": {
+                "member": [
+                    "first name",
+                    "last name"
+                ]
+            },
+            "member:dues payment date": {
+                "income": [
+                    "date received"
+                ],
+                "member": [
+                    "member id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Who was the first one paid his/her dues? Tell the full name.",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "member"
+        ],
+        "edges_to_check": [
+            [
+                "member"
+            ]
+        ],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "member:full name": {
+                "member": [
+                    "last name",
+                    "first name"
+                ]
+            },
+            "member:dues payment date": {
+                "member": [
+                    "member id",
+                    "email"
+                ]
+            }
+        }
+    },
+    {
+        "query": "List all the members who attended the event \"October Meeting\".",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "member_details"
+            ],
+            [
+                "event"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "member:name": {
+                "member_details": [
+                    "member name",
+                    "phone"
+                ]
+            },
+            "event:name": {
+                "event": [
+                    "event name",
+                    "event id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "List all the expenses incurred by the vice president.",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "member_details"
+            ],
+            [
+                "expense"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "expense:item": {
+                "expense": [
+                    "expense id",
+                    "link to budget"
+                ]
+            },
+            "member:position": {
+                "member_details": [
+                    "position",
+                    "member name"
+                ]
+            }
+        }
+    },
+    {
+        "query": "How many members attended the \"Women's Soccer\" event?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "event"
+            ],
+            [
+                "member"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "member:attendance": {
+                "member": [
+                    "member id",
+                    "phone"
+                ]
+            },
+            "event:name": {
+                "event": [
+                    "event name",
+                    "event id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "When did the member, Casey Mason, received the income?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "member"
+            ],
+            [
+                "income"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "member:name": {
+                "member": [
+                    "first name",
+                    "last name"
+                ]
+            },
+            "income:date": {
+                "income": [
+                    "date received",
+                    "amount"
+                ]
+            }
+        }
+    },
+    {
+        "query": "How many events did the member with the phone number \"954-555-6240\" attend?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "event"
+            ],
+            [
+                "member"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "member:phone number": {
+                "member": [
+                    "phone",
+                    "member id"
+                ]
+            },
+            "event:attendance": {
+                "event": [
+                    "status",
+                    "event date"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Among all the closed events, which event has the highest spend-to-budget ratio?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "event",
+            "budget"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "event",
+                    "budget"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "event-budget": [
+                {
+                    "table1_column": "event.event_status",
+                    "table2_column": "budget.status",
+                    "jaccard": 1.0,
+                    "uniqueness": 0.07142857142857142
+                },
+                {
+                    "table1_column": "event.event_name",
+                    "table2_column": "budget.event_name",
+                    "jaccard": 0.5897435897435898,
+                    "uniqueness": 0.9285714285714286
+                }
+            ]
+        },
+        "subquery_tables": {
+            "event:status": {
+                "event": [
+                    "status",
+                    "event id"
+                ]
+            },
+            "event:spend": {
+                "budget": [
+                    "event_name",
+                    "event status"
+                ]
+            },
+            "event:budget": {
+                "budget": [
+                    "event status",
+                    "event_name"
+                ]
+            }
+        }
+    },
+    {
+        "query": "List the name of students that have attended more than 7 events.",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "event"
+            ],
+            [
+                "college"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "student:name": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            },
+            "event:attendance count": {
+                "event": [
+                    "status",
+                    "event date"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Among the students majored in interior design, who have attended the Community Theater event?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "event"
+            ],
+            [
+                "college"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "student:major": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            },
+            "event:name": {
+                "event": [
+                    "event name",
+                    "event id"
+                ]
+            },
+            "student:name": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Which student has been entrusted to manage the budget for the Yearly Kickoff?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "budget",
+            "event",
+            "college"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "event",
+                    "budget"
+                ]
+            ],
+            [
+                "college"
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "event-budget": [
+                {
+                    "table1_column": "event.event_status",
+                    "table2_column": "budget.status",
+                    "jaccard": 1.0,
+                    "uniqueness": 0.07142857142857142
+                },
+                {
+                    "table1_column": "event.event_name",
+                    "table2_column": "budget.event_name",
+                    "jaccard": 0.5897435897435898,
+                    "uniqueness": 0.9285714285714286
+                }
+            ]
+        },
+        "subquery_tables": {
+            "student:name": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            },
+            "budget:manager": {
+                "budget": [
+                    "category",
+                    "budget id"
+                ]
+            },
+            "event:name": {
+                "event": [
+                    "event name",
+                    "event id"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Which students manage to generate the highest income. State his/her full name along with the income source.",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "college"
+            ],
+            [
+                "income"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "student:full name": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            },
+            "income:amount": {
+                "income": [
+                    "amount",
+                    "income id"
+                ]
+            },
+            "income:source": {
+                "income": [
+                    "source",
+                    "amount"
+                ]
+            }
+        }
+    },
+    {
+        "query": "How many members did attend the event 'Community Theater' in 2019?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            [
+                "event"
+            ],
+            [
+                "member"
+            ]
+        ],
+        "edges_to_check": [],
+        "possible_joins_for_edges": {},
+        "subquery_tables": {
+            "member:attendance": {
+                "member": [
+                    "member id",
+                    "phone"
+                ]
+            },
+            "event:name": {
+                "event": [
+                    "event name",
+                    "event id"
+                ]
+            },
+            "event:year": {
+                "event": [
+                    "event date",
+                    "event name"
+                ]
+            }
+        }
+    },
+    {
+        "query": "Give all the members and the college they are from?",
+        "db_id": "student_club",
+        "optimized_paths": [
+            "member",
+            "major",
+            "department",
+            "college"
+        ],
+        "edges_to_check": [
+            [
+                [
+                    "member",
+                    "major"
+                ],
+                [
+                    "major",
+                    "department"
+                ],
+                [
+                    "department",
+                    "college"
+                ]
+            ]
+        ],
+        "possible_joins_for_edges": {
+            "member-major": [
+                {
+                    "table1_column": "member.major_id",
+                    "table2_column": "major.link_to_major",
+                    "jaccard": 0.22807017543859648,
+                    "uniqueness": 1.0
+                }
+            ],
+            "major-department": [
+                {
+                    "table1_column": "major.dept_id",
+                    "table2_column": "department.dept_id",
+                    "jaccard": 1.0,
+                    "uniqueness": 1.0
+                }
+            ],
+            "department-college": [
+                {
+                    "table1_column": "department.college_id",
+                    "table2_column": "college.college_id",
+                    "jaccard": 1.0,
+                    "uniqueness": 1.0
+                }
+            ]
+        },
+        "subquery_tables": {
+            "members": {
+                "member": [
+                    "first name",
+                    "last name"
+                ]
+            },
+            "college": {
+                "college": [
+                    "college name",
+                    "college id"
+                ]
+            }
+        }
+    }
+]
